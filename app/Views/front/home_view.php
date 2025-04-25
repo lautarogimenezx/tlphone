@@ -112,7 +112,7 @@
         <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
                     <button class="btn position-absolute top-0 end-0 m-2 bg-transparent border-0 fs-2" style="z-index: 1;" title="Agregar a favoritos">🤍</button>
-                    <img src="assets/img/aipodsmax.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="AirPods Max">
+                    <img src="assets/img/auricularess.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="AirPods Max">
                     <div class="card-body">
                         <span class="badge mb-2 bg-warning">ENVÍO GRATIS</span>
                         <h4>$174.999</h4>
