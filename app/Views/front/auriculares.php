@@ -77,14 +77,14 @@
         <div class="row g-4">
 
             <!-- Tarjeta 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
-                    <button class="btn position-absolute top-0 end-0 m-2 bg-transparent border-0 fs-2" style="z-index: 1;" title="Agregar a favoritos">🤍</button>
-                    <img src="assets/img/Auriculares.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="AirPods Pro">
+                    <button class="btn position-absolute top-0 end-0 m-2 fs-2 border-0 bg-transparent" title="Agregar a favoritos">🤍</button>
+                    <img src="assets/img/Auriculares.png" class="card-img-top object-fit-contain img-tarjetas" alt="AirPods Pro">
                     <div class="card-body">
-                        <span class="badge mb-2 bg-success">¡NUEVO!</span>
-                        <h4>$199.999</h4>
-                        <p class="text-muted small">Precio sin impuestos nacionales $165.289,26</p>
+                        <span class="badge mb-2 bg-warning">ENVÍO GRATIS</span>
+                        <h4>$174.999</h4>
+                        <p class="text-muted small">Precio sin impuestos nacionales $144.627,27</p>
                         <p>Apple AirPods Pro - Segunda Generación</p>
                         <a href="#" class="btn btn-dark w-100">Agregar al carrito</a>
                     </div>
@@ -94,8 +94,8 @@
             <!-- Tarjeta 2 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
-                    <button class="btn position-absolute top-0 end-0 m-2 bg-transparent border-0 fs-2" style="z-index: 1;" title="Agregar a favoritos">🤍</button>
-                    <img src="assets/img/auricularesjbl.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="JBL Tune Flex">
+                    <button class="btn position-absolute top-0 end-0 m-2 fs-2 border-0 bg-transparent" title="Agregar a favoritos">🤍</button>
+                    <img src="assets/img/auricularesjbl.png" class="card-img-top object-fit-contain img-tarjetas" alt="JBL Tune Flex">
                     <div class="card-body">
                         <span class="badge mb-2 bg-success">¡NUEVO!</span>
                         <h4>$199.999</h4>
@@ -109,8 +109,8 @@
             <!-- Tarjeta 3 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
-                    <button class="btn position-absolute top-0 end-0 m-2 bg-transparent border-0 fs-2" style="z-index: 1;" title="Agregar a favoritos">🤍</button>
-                    <img src="assets/img/redmibuds.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="Xiaomi Mi True">
+                    <button class="btn position-absolute top-0 end-0 m-2 fs-2 border-0 bg-transparent" title="Agregar a favoritos">🤍</button>
+                    <img src="assets/img/redmibuds.png" class="card-img-top object-fit-contain img-tarjetas" alt="Xiaomi Mi True">
                     <div class="card-body">
                         <span class="badge mb-2 bg-primary">STOCK LIMITADO</span>
                         <h4>$229.999</h4>
@@ -124,8 +124,8 @@
             <!-- Tarjeta 4 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
-                    <button class="btn position-absolute top-0 end-0 m-2 bg-transparent border-0 fs-2" style="z-index: 1;" title="Agregar a favoritos">🤍</button>
-                    <img src="assets/img/BLUETOOTH.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="JBL Tune 520BT">
+                    <button class="btn position-absolute top-0 end-0 m-2 fs-2 border-0 bg-transparent" title="Agregar a favoritos">🤍</button>
+                    <img src="assets/img/BLUETOOTH.png" class="card-img-top object-fit-contain img-tarjetas"  alt="JBL Tune 520BT">
                     <div class="card-body">
                         <span class="badge mb-2 bg-warning">ENVÍO GRATIS</span>
                         <h4>$174.999</h4>
@@ -139,12 +139,12 @@
             <!-- Tarjeta 5 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
-                    <button class="btn position-absolute top-0 end-0 m-2 bg-transparent border-0 fs-2" style="z-index: 1;" title="Agregar a favoritos">🤍</button>
-                    <img src="assets/img/aipodsmax.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="AirPods Max">
+                    <button class="btn position-absolute top-0 end-0 m-2 fs-2 border-0 bg-transparent" title="Agregar a favoritos">🤍</button>
+                    <img src="assets/img/aipodsmax.png" class="card-img-top object-fit-contain img-tarjetas" alt="AirPods Max">
                     <div class="card-body">
-                        <span class="badge mb-2 bg-warning">ENVÍO GRATIS</span>
-                        <h4>$174.999</h4>
-                        <p class="text-muted small">Precio sin impuestos nacionales $144.627,27</p>
+                        <span class="badge mb-2 bg-success">¡NUEVO!</span>
+                        <h4>$199.999</h4>
+                        <p class="text-muted small">Precio sin impuestos nacionales $165.289,26</p>
                         <p>Apple AirPods Max con Smart Case</p>
                         <a href="#" class="btn btn-dark w-100">Agregar al carrito</a>
                     </div>
@@ -154,8 +154,8 @@
             <!-- Tarjeta 6 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
-                    <button class="btn position-absolute top-0 end-0 m-2 bg-transparent border-0 fs-2" style="z-index: 1;" title="Agregar a favoritos">🤍</button>
-                    <img src="assets/img/sonyauriculares.png" class="card-img-top object-fit-contain" style="height: 300px;" alt="Sony WH-1000XM5">
+                    <button class="btn position-absolute top-0 end-0 m-2 fs-2 border-0 bg-transparent" title="Agregar a favoritos">🤍</button>
+                    <img src="assets/img/sonyauriculares.png" class="card-img-top object-fit-contain img-tarjetas" alt="Sony WH-1000XM5">
                     <div class="card-body">
                         <span class="badge mb-2 bg-primary">STOCK LIMITADO</span>
                         <h4>$229.999</h4>
@@ -164,7 +164,7 @@
                         <a href="#" class="btn btn-dark w-100">Agregar al carrito</a>
                     </div>
                 </div>
-            </div>
+          </div>
 
         </div>
     </div>
