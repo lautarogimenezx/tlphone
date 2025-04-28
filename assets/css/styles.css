@@ -36,3 +36,11 @@ body {
     max-width: 60px !important;
 
 }
+
+.card {
+    transition: transform 0.3s ease; /* Suaviza la transición */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Agranda un 5% cuando pasas el mouse */
+}
