@@ -7,9 +7,11 @@ class Home extends BaseController
     public function index()
     {
         $data['titulo']='tlphone | venta online';
+        $data['msg'] = session()->getFlashdata('msg');
+
         echo view('front/head_view',$data);
         echo view('front/nav_view');
-        echo view('front/home_view');
+        echo view('front/home_view',$data);
         echo view('front/whatsapp_view');
         echo view('front/footer_view');
     }
@@ -114,22 +116,12 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
-    public function iniciosesion()
-    {
-        $data['titulo']='Iniciar sesión | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('front/iniciosesion');
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
-
-    public function registro()
+    public function registrarse()
     {
         $data['titulo']='Registrarse | tlphone';
         echo view('front/head_view',$data);
         echo view('front/nav_view');
-        echo view('front/registro');
+        echo view('back/usuario/registrarse');
         echo view('front/whatsapp_view');
         echo view('front/footer_view');
     }

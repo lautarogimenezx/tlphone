@@ -1,0 +1,356 @@
+CRITICAL - 2025-05-23 15:25:28 --> Error: Call to undefined function set_value()
+[Method: GET, Route: registro]
+in APPPATH\Views\front\registro.php on line 22.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 4 APPPATH\Controllers\Home.php(132): view('front/registro')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 15:40:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/usuario/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/usuario/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/registro', [], true)
+ 3 APPPATH\Controllers\Usuario_controller.php(21): view('back/usuario/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 15:41:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/usuario/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/usuario/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(21): view('back/usuario/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 15:44:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(20): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 15:45:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(20): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 15:46:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/usuario/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/usuario/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(21): view('back/usuario/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 15:47:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(20): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-23 15:49:02 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', '', '', 'tlphone', 3306, '', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tlphone\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array)
+#6 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array, NULL, 'email')
+#7 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx...', Array, Array, 'email')
+#8 C:\xampp\htdocs\tlphone\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\tlphone\app\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+#11 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#12 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\tlphone\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\tlphone\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array)
+#5 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx...', Array, Array, 'email')
+#7 C:\xampp\htdocs\tlphone\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\tlphone\app\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#11 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-23 15:49:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: enviar-form]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx@gmail.com', 'usuarios.email', [...])
+ 5 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx@gmail.com', 'usuarios.email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-23 15:56:06 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tlphone\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array)
+#6 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array, NULL, 'email')
+#7 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx...', Array, Array, 'email')
+#8 C:\xampp\htdocs\tlphone\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\tlphone\app\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+#11 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#12 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\tlphone\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\tlphone\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array)
+#5 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx...', Array, Array, 'email')
+#7 C:\xampp\htdocs\tlphone\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\tlphone\app\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#11 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-23 15:56:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: enviar-form]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx@gmail.com', 'usuarios.email', [...])
+ 5 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx@gmail.com', 'usuarios.email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-23 15:57:52 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4' in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tlphone\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array)
+#6 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array, NULL, 'email')
+#7 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx...', Array, Array, 'email')
+#8 C:\xampp\htdocs\tlphone\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\tlphone\app\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+#11 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#12 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4' in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\tlphone\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\tlphone\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array)
+#5 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx...', 'usuarios.email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\tlphone\system\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx...', Array, Array, 'email')
+#7 C:\xampp\htdocs\tlphone\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\tlphone\app\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#11 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-23 15:57:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+[Method: POST, Route: enviar-form]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('lautarogimenezx@gmail.com', 'usuarios.email', [...])
+ 5 SYSTEMPATH\Validation\Validation.php(337): CodeIgniter\Validation\StrictRules\Rules->is_unique('lautarogimenezx@gmail.com', 'usuarios.email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('email', 'email', 'lautarogimenezx@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\Usuarios_controller.php(31): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->formValidation()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:14:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(19): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:15:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(19): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:15:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(19): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:18:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(19): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:21:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registro]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(19): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:22:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registrarse]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(19): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:24:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/registro.php"
+[Method: GET, Route: registrarse]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/registro.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/registro', [], true)
+ 3 APPPATH\Controllers\Usuarios_controller.php(19): view('front/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-23 16:38:42 --> ErrorException: Undefined array key "id_usuario"
+[Method: POST, Route: iniciosesion]
+in APPPATH\Controllers\Login_controller.php on line 42.
+ 1 APPPATH\Controllers\Login_controller.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_usuario"', 'C:\\xampp\\htdocs\\tlphone\\app\\Controllers\\Login_controller.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login_controller->auth()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

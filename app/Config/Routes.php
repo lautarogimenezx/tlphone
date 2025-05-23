@@ -30,6 +30,20 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
+$routes->get('/registrarse', 'Usuarios_controller::create');
+$routes->post('/enviar-form', 'Usuarios_controller::formValidation');
+$routes->get('/enviarlogin', 'Login_controller::auth');
+
+$routes->get('/panel', 'Panel_controller::index',['filter' => 'auth']);
+
+
+$routes->get('/iniciosesion', 'Login_controller::index');
+$routes->post('/iniciosesion', 'Login_controller::auth');
+$routes->get('/logout', 'Login_controller::logout');
+
+
+
 $routes->get('/nosotros', 'Home::nosotros');
 $routes->get('/contacto', 'Home::contacto');
 $routes->get('/celulares', 'Home::celulares');
@@ -40,11 +54,9 @@ $routes->get('/cargadores', 'Home::cargadores');
 $routes->get('/fundas', 'Home::fundas');
 $routes->get('/terminos', 'Home::terminos');
 $routes->get('/comercializacion', 'Home::comercializacion');
-$routes->get('/iniciosesion', 'Home::iniciosesion');
-$routes->get('/registro', 'Home::registro');
 $routes->get('/carrito', 'Home::carrito');
 $routes->get('/favoritos', 'Home::favoritos');
-$routes->get('/enviar-form', 'Usuario_controller::formValidation');
+
 
 
 

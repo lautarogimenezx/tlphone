@@ -1,3 +1,9 @@
+<?php if (isset($msg)): ?>
+    <div class="alert alert-success text-center">
+        <?= esc($msg) ?>
+    </div>
+<?php endif; ?>
+
 <!-- Carrusel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
