@@ -35,8 +35,9 @@ $routes->get('/registrarse', 'Usuarios_controller::create');
 $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
 $routes->get('/enviarlogin', 'Login_controller::auth');
 
-$routes->get('/panel', 'Panel_controller::index',['filter' => 'auth']);
+$routes->get('/administracion', 'Home::administracion');
 
+$routes->get('/iniciosesion', 'Login_controller::index');
 
 $routes->get('/iniciosesion', 'Login_controller::index');
 $routes->post('/iniciosesion', 'Login_controller::auth');
