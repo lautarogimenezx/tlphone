@@ -76,7 +76,7 @@
     <div class="container pb-5">
         <div class="row g-4">
 
-            <!-- Tarjeta 1 -->
+        <!-- Tarjeta 1 -->
         <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
                     <button class="btn position-absolute top-0 end-0 m-2 fs-2 border-0 bg-transparent" title="Agregar a favoritos">🤍</button>
@@ -164,8 +164,7 @@
                         <a href="#" class="btn btn-dark w-100">Agregar al carrito</a>
                     </div>
                 </div>
-          </div>
-
+            </div>
         </div>
     </div>
 </section>

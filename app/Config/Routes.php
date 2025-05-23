@@ -44,6 +44,7 @@ $routes->get('/iniciosesion', 'Home::iniciosesion');
 $routes->get('/registro', 'Home::registro');
 $routes->get('/carrito', 'Home::carrito');
 $routes->get('/favoritos', 'Home::favoritos');
+$routes->get('/enviar-form', 'Usuario_controller::formValidation');
 
 
 

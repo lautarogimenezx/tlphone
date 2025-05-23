@@ -122,7 +122,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Tarjeta 2 -->
         <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-center h-100 position-relative">
