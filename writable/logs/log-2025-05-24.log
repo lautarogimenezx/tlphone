@@ -1,0 +1,159 @@
+CRITICAL - 2025-05-24 06:43:07 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "altaproducto class="
+[Method: GET, Route: altaproducto%20class=]
+in SYSTEMPATH\Router\Router.php on line 739.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('altaproducto class=')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('altaproducto class=')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:47:49 --> Error: Class "App\Controllers\categoria_model" not found
+[Method: GET, Route: altaproducto]
+in APPPATH\Controllers\Producto_controller.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:48:19 --> Error: Class "App\Controllers\categoria_model" not found
+[Method: GET, Route: altaproducto]
+in APPPATH\Controllers\Producto_controller.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:51:35 --> Error: Class "App\Controllers\categoria_model" not found
+[Method: GET, Route: altaproducto]
+in APPPATH\Controllers\Producto_controller.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:52:21 --> Error: Class "App\Controllers\categoria_model" not found
+[Method: GET, Route: altaproducto]
+in APPPATH\Controllers\Producto_controller.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:52:30 --> Error: Class "App\Controllers\categoria_model" not found
+[Method: GET, Route: altaproducto]
+in APPPATH\Controllers\Producto_controller.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:53:27 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\categoria_model::getCategorias
+[Method: GET, Route: altaproducto]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Producto_controller.php(33): CodeIgniter\Model->__call('getCategorias', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:54:15 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\Producto_model::getProductoAll
+[Method: GET, Route: altaproducto]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Producto_controller.php(36): CodeIgniter\Model->__call('getProductoAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 06:55:50 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\Producto_model::getProductoAll
+[Method: GET, Route: altaproducto]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Producto_controller.php(36): CodeIgniter\Model->__call('getProductoAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 07:13:58 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\Producto_model::getProductoAll
+[Method: GET, Route: altaproducto]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Producto_controller.php(36): CodeIgniter\Model->__call('getProductoAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 07:14:48 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\Producto_model::getProductoAll
+[Method: GET, Route: altaproducto]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Producto_controller.php(36): CodeIgniter\Model->__call('getProductoAll', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 07:22:44 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: altaproducto]
+in APPPATH\Views\back\administradores\alta_producto_view.php on line 17.
+ 1 APPPATH\Views\back\administradores\alta_producto_view.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\administradores\\alta_producto_view.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\administradores\\alta_producto_view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/administradores/alta_producto_view', [], true)
+ 5 APPPATH\Controllers\Producto_controller.php(41): view('back/administradores/alta_producto_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 07:22:52 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: altaproducto]
+in APPPATH\Views\back\administradores\alta_producto_view.php on line 17.
+ 1 APPPATH\Views\back\administradores\alta_producto_view.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\administradores\\alta_producto_view.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\administradores\\alta_producto_view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/administradores/alta_producto_view', [], true)
+ 5 APPPATH\Controllers\Producto_controller.php(41): view('back/administradores/alta_producto_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->creaproducto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 07:43:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/administradores/producto_activos.php"
+[Method: GET, Route: productosactivos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/administradores/producto_activos.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/administradores/producto_activos', [], true)
+ 3 APPPATH\Controllers\Producto_controller.php(26): view('back/administradores/producto_activos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-24 07:43:28 --> ErrorException: Undefined variable $productos
+[Method: GET, Route: productosactivos]
+in APPPATH\Views\back\administradores\productos_activos.php on line 23.
+ 1 APPPATH\Views\back\administradores\productos_activos.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\administradores\\productos_activos.php', 23)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\administradores\\productos_activos.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/administradores/productos_activos', [], true)
+ 5 APPPATH\Controllers\Producto_controller.php(26): view('back/administradores/productos_activos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

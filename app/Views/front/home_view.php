@@ -1,8 +1,9 @@
-<?php if (isset($msg)): ?>
-    <div class="alert alert-success text-center">
-        <?= esc($msg) ?>
+<?php if (session()->getFlashdata('msg')): ?>
+    <div id="mensaje-bienvenida" class="alert alert-success text-center">
+        <?= esc(session()->getFlashdata('msg')) ?>
     </div>
 <?php endif; ?>
+
 
 <!-- Carrusel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

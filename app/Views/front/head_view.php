@@ -12,3 +12,7 @@
 
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
+<body>
+<div class="wrapper d-flex flex-column min-vh-100">
+

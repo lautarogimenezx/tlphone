@@ -1,4 +1,3 @@
-<body>
 
 <?php
     $session = session();
@@ -20,9 +19,9 @@
 
 
 <!-- Navbar superior para administradores -->    
-    <?php if ($perfil == 1): ?>
+<?php if ($perfil == 1): ?>
 
-    <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarContent">
+<div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarContent">
     <!-- Menú de la izquierda -->
     <ul class="navbar-nav me-3">
         <li class="nav-item dropdown">
@@ -43,25 +42,42 @@
     </ul>
 
     <!-- Texto centrado con el nombre del administrador -->
-    <div class="text-white text-center fw-bold fs-5 mx-auto">
-        Administrador: <?= session('nombre'); ?>
+    <div class="text-secondary text-center fw-bold fs-5 mx-auto font-monospace">
+        ADMINISTRADOR: <?= session('nombre'); ?>
     </div>
+
+
+
 
     <!-- Íconos de la derecha -->
     <div class="d-flex align-items-center position-relative">
-        <div class="settings-wrapper position-relative me-3">
-            <a href="<?= base_url('administracion'); ?>" class="text-white fs-5" title="Configuración">
+
+        <!-- Menú desplegable de configuración -->
+        <div class="dropdown me-3">
+            <a class="text-white fs-5 dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" title="Administración">
                 <i class="fas fa-cog"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                <li><a class="dropdown-item" href="<?= base_url('usuarios'); ?>">Usuarios</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('productos'); ?>">Productos</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('ventas'); ?>">Ventas</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('consultas'); ?>">Consultas</a></li>
+            </ul>
+        </div>
+        <!-- Botón de logout -->
+        <div class="logout-wrapper position-relative me-3">
+            <a href="<?= base_url('logout'); ?>" class="text-white fs-5 text-decoration-none" title="Cerrar sesión">
+                <i class="bi bi-box-arrow-right"></i>
             </a>
         </div>
 
-        <div class="logout-wrapper position-relative me-3">
-            <a href="<?= base_url('logout'); ?>" class="text-white fs-5" title="Cerrar sesión">
-                <i class="fas fa-door-open"></i>
-            </a>
-        </div>
+        
     </div>
 </div>
+
+
+
+
 
 
 <!-- Navbar superior para usuarios logueados -->  
@@ -85,11 +101,17 @@
         <li class="nav-item"><a class="nav-link" href="<?php echo base_url('contacto');?>">Contacto</a></li>
         </ul>
 
-                <div class="d-flex align-items-center position-relative">
-            <div class="login-wrapper position-relative me-3">
-                <a href="<?php echo base_url('iniciosesion');?>" class="text-white fs-5">
+        <div class="d-flex align-items-center position-relative">
+            <div class="dropdown position-relative me-3">
+                <a href="#" class="text-white fs-5 dropdown-toggle text-decoration-none" role="button" data-bs-toggle="dropdown" title="Cuenta">
                     <i class="fas fa-user"></i>
                 </a>
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                    <li><a class="dropdown-item" href="<?= base_url('perfil'); ?>">Mi perfil</a></li>
+                    <li><a class="dropdown-item" href="<?= base_url('compras'); ?>">Compras</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
+                </ul>
             </div>
 
             <div class="favorites-wrapper position-relative me-3">
@@ -98,7 +120,7 @@
                 </a>
             </div>
 
-            <div class="cart-wrapper position-relative">
+            <div class="cart-wrapper position-relative me-3">
                 <a href="<?php echo base_url('carrito');?>" class="text-white fs-5">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -106,6 +128,7 @@
                     </span>
                 </a>
             </div>
+
         </div>
     </div>
     </div>
@@ -131,27 +154,14 @@
         <li class="nav-item"><a class="nav-link" href="<?php echo base_url('contacto');?>">Contacto</a></li>
         </ul>
 
-                <div class="d-flex align-items-center position-relative">
-            <div class="login-wrapper position-relative me-3">
-                <a href="<?php echo base_url('iniciosesion');?>" class="text-white fs-5">
-                    <i class="fas fa-user"></i>
-                </a>
-            </div>
+        
+        <div class="login-wrapper position-relative me-3">
+            <a href="<?php echo base_url('iniciosesion');?>" class="text-white fs-5">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
 
-            <div class="favorites-wrapper position-relative me-3">
-                <a href="<?php echo base_url('favoritos');?>" class="text-white fs-5">
-                    <i class="fas fa-heart"></i>
-                </a>
-            </div>
-
-            <div class="cart-wrapper position-relative">
-                <a href="<?php echo base_url('carrito');?>" class="text-white fs-5">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        3
-                    </span>
-                </a>
-            </div>
+            
         </div>
     </div>
     </div>

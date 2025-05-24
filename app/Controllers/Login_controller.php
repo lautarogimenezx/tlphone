@@ -48,8 +48,9 @@ class Login_controller extends BaseController
                     'logged_in'  => true
                 ];
                 $session->set($ses_data);
-                $session->setFlashdata('msg', '¡Bienvenido!');
-                return redirect()->to('/'); 
+                $session->setFlashdata('msg', '¡Bienvenido, ' . $ses_data['nombre'] . '!');
+                return redirect()->to('/');
+
             } else {
                 $session->setFlashdata('msg', 'Contraseña incorrecta');
                 return redirect()->to('/iniciosesion');

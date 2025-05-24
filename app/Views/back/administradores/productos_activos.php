@@ -1,0 +1,44 @@
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Lista de Productos</h2>
+
+    <?php if (session()->getFlashdata('success')): ?>
+        <div class="alert alert-success">
+            <?= session()->getFlashdata('success') ?>
+        </div>
+    <?php endif; ?>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Precio Venta</th>
+                <th>Stock</th>
+                <th>Stock Mínimo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($productos as $producto): ?>
+                <tr>
+                    <td>
+                        <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="Imagen del producto" width="80">
+                    </td>
+                    <td><?= esc($producto['nombre_prod']) ?></td>
+                    <td>$<?= number_format($producto['precio'], 2) ?></td>
+                    <td>$<?= number_format($producto['precio_vta'], 2) ?></td>
+                    <td><?= esc($producto['stock']) ?></td>
+                    <td><?= esc($producto['stock_min']) ?></td>
+                    <td>
+                        <!-- Aquí podés agregar acciones como editar o eliminar -->
+                        <a href="#" class="btn btn-sm btn-primary disabled">Editar</a>
+                        <a href="#" class="btn btn-sm btn-danger disabled">Eliminar</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+    <a href="<?= base_url('altaproducto'); ?>" class="btn btn-success mt-3">Agregar nuevo producto</a>
+</div>

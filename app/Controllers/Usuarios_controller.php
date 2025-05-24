@@ -11,6 +11,20 @@ class Usuarios_controller extends BaseController
         helper(['form', 'url']);
     }
 
+    public function index()
+    {
+    $usuarioModel = new \App\Models\Usuarios_model();
+    $data['usuarios'] = $usuarioModel->findAll();
+
+    $dato['titulo'] = 'Usuarios Registrados';
+
+    echo view('front/head_view', $dato);
+    echo view('front/nav_view');
+    echo view('back/administradores/usuarios_lista', $data); 
+    echo view('front/footer_view');
+    }
+
+
     public function create()
     {
         $data['titulo'] = 'Registrarse | tlphone';

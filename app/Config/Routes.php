@@ -33,9 +33,12 @@ $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
 $routes->get('/registrarse', 'Usuarios_controller::create');
 $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
+$routes->get('/usuarios', 'Usuarios_controller::index');
+
 $routes->get('/enviarlogin', 'Login_controller::auth');
 
 $routes->get('/administracion', 'Home::administracion');
+$routes->get('/productos', 'Home::productos');
 
 $routes->get('/iniciosesion', 'Login_controller::index');
 
@@ -43,6 +46,9 @@ $routes->get('/iniciosesion', 'Login_controller::index');
 $routes->post('/iniciosesion', 'Login_controller::auth');
 $routes->get('/logout', 'Login_controller::logout');
 
+$routes->get('/altaproducto', 'Producto_controller::creaproducto');
+$routes->post('/productos/store', 'Producto_controller::store');
+$routes->get('/productosactivos', 'Producto_controller::index');
 
 
 $routes->get('/nosotros', 'Home::nosotros');

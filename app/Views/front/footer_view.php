@@ -1,3 +1,4 @@
+</div>
 <footer class="bg-dark text-white pt-2 pb-2">
     <div class="container">
     <div class="row align-items-center text-center text-md-start">
@@ -41,6 +42,18 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Espera 4 segundos y luego oculta el mensaje
+    setTimeout(function () {
+        const mensaje = document.getElementById('mensaje-bienvenida');
+        if (mensaje) {
+            // Efecto de desvanecimiento (opcional)
+            mensaje.style.transition = 'opacity 0.5s ease';
+            mensaje.style.opacity = '0';
+            setTimeout(() => mensaje.style.display = 'none', 500); // Oculta completamente después del fade
+        }
+    }, 4000); // 4000 ms = 4 segundos
+</script>
 </body>
 
 </html>
