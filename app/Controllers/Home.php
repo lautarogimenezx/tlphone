@@ -154,13 +154,4 @@ class Home extends BaseController
         echo view('back/administradores/administracion');
         echo view('front/footer_view');
     }
-
-    public function productos()
-    {
-        $data['titulo']='Administración | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('back/administradores/productos');
-        echo view('front/footer_view');
-    }
 }

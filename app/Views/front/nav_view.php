@@ -59,7 +59,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                 <li><a class="dropdown-item" href="<?= base_url('usuarios'); ?>">Usuarios</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('productos'); ?>">Productos</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('productosactivos'); ?>">Productos</a></li>
                 <li><a class="dropdown-item" href="<?= base_url('ventas'); ?>">Ventas</a></li>
                 <li><a class="dropdown-item" href="<?= base_url('consultas'); ?>">Consultas</a></li>
             </ul>

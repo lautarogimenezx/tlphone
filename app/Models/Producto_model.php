@@ -11,7 +11,7 @@ class Producto_model extends Model
 
     public function getProductoAll()
     {
-        // Devuelve solo productos NO eliminados
-        return $this->where('eliminado', 0)->findAll();
+        return $this->where('eliminado', 'NO')->findAll(); // Solo productos activos
     }
+
 }

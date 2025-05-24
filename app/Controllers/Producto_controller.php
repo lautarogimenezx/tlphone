@@ -85,7 +85,7 @@ class Producto_controller extends Controller
             $producto = new Producto_Model();
             $producto->insert($data);
             session()->setFlashdata('success', 'Alta Exitosa...');
-            return $this->response->redirect(site_url('crear'));
+            return $this->response->redirect(site_url('productosactivos'));
         }
     }
 
@@ -137,15 +137,15 @@ class Producto_controller extends Controller
     public function delete($id)
     {
         $productoModel = new Producto_Model();
-        $productoModel->update($id, ['activo' => 0]); // Baja lógica
+        $productoModel->update($id, ['eliminado' => 'SI']); // Baja lógica con 'SI'
         session()->setFlashdata('success', 'Producto eliminado');
-        return redirect()->to(site_url('productos'));
+        return redirect()->to(site_url('productos/eliminados'));
     }
 
     public function eliminados()
     {
         $productoModel = new Producto_Model();
-        $data['productos'] = $productoModel->where('activo', 0)->findAll();
+        $data['productos'] = $productoModel->where('eliminado', 'SI')->findAll(); // Filtrar por 'SI'
         $dato['titulo'] = 'Productos eliminados';
 
         echo view('front/head_view', $dato);
@@ -157,8 +157,8 @@ class Producto_controller extends Controller
     public function reactivar($id)
     {
         $productoModel = new Producto_Model();
-        $productoModel->update($id, ['activo' => 1]);
+        $productoModel->update($id, ['eliminado' => 'NO']); // Reactivar con 'NO'
         session()->setFlashdata('success', 'Producto reactivado');
-        return redirect()->to(site_url('productos/eliminados'));
+        return redirect()->to(site_url('productosactivos'));
     }
 }

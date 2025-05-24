@@ -71,4 +71,21 @@ class Usuarios_controller extends BaseController
         session()->setFlashdata('success', 'Usuario registrado con éxito');
         return redirect()->to('/registrarse');
     }
+
+    public function baja($id)
+    {
+        $usuarioModel = new Usuarios_model();
+        $usuarioModel->update($id, ['baja' => 'SI']);
+        session()->setFlashdata('success', 'Usuario dado de baja');
+        return redirect()->to(site_url('usuarios'));
+    }
+
+    public function alta($id)
+    {
+        $usuarioModel = new Usuarios_model();
+        $usuarioModel->update($id, ['baja' => 'NO']);
+        session()->setFlashdata('success', 'Usuario reactivado');
+        return redirect()->to(site_url('usuarios'));
+    }
+
 }

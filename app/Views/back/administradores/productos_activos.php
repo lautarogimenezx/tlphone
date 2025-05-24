@@ -1,5 +1,5 @@
 <div class="container mt-5 mb-5">
-    <h2 class="text-center mb-4">Lista de Productos</h2>
+    <h2 class="text-center mb-4">Productos Activos</h2>
 
     <?php if (session()->getFlashdata('success')): ?>
         <div class="alert alert-success">

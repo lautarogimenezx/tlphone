@@ -1,13 +1,43 @@
-<table class="table">
-    <thead><tr><th>Producto</th><th>Acción</th></tr></thead>
-    <tbody>
-    <?php foreach ($productos as $p): ?>
-        <tr>
-            <td><?= esc($p['nombre_prod']) ?></td>
-            <td>
-                <a href="<?= base_url('productos/reactivar/' . $p['id']) ?>" class="btn btn-success btn-sm">Reactivar</a>
-            </td>
-        </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table>
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Productos Eliminados</h2>
+
+    <?php if (session()->getFlashdata('success')): ?>
+        <div class="alert alert-success">
+            <?= session()->getFlashdata('success') ?>
+        </div>
+    <?php endif; ?>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Precio Venta</th>
+                <th>Stock</th>
+                <th>Stock Mínimo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($productos as $producto): ?>
+                <tr>
+                    <td>
+                        <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="Imagen del producto" width="80">
+                    </td>
+                    <td><?= esc($producto['nombre_prod']) ?></td>
+                    <td>$<?= number_format($producto['precio'], 2) ?></td>
+                    <td>$<?= number_format($producto['precio_vta'], 2) ?></td>
+                    <td><?= esc($producto['stock']) ?></td>
+                    <td><?= esc($producto['stock_min']) ?></td>
+                    <td>
+                        <a href="<?= base_url('productos/reactivar/' . $producto['id']) ?>" class="btn btn-sm btn-success">Reactivar</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+    <a href="<?= base_url('productosactivos'); ?>" class="btn btn-primary mt-3">Volver a productos activos</a>
+</div>
+

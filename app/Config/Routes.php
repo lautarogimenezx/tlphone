@@ -34,11 +34,14 @@ $routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
 $routes->get('/registrarse', 'Usuarios_controller::create');
 $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
 $routes->get('/usuarios', 'Usuarios_controller::index');
+$routes->get('usuarios/baja/(:num)', 'Usuarios_controller::baja/$1');
+$routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1');
+
 
 $routes->get('/enviarlogin', 'Login_controller::auth');
 
 $routes->get('/administracion', 'Home::administracion');
-$routes->get('/productos', 'Home::productos');
+
 
 $routes->get('/iniciosesion', 'Login_controller::index');
 
