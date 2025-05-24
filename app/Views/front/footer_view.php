@@ -1,4 +1,4 @@
-</div>
+
 <footer class="bg-dark text-white pt-2 pb-2">
     <div class="container">
     <div class="row align-items-center text-center text-md-start">
@@ -24,22 +24,23 @@
         <div class="col-md-4 text-md-end mpt-2 pb-2">
         <div class="d-flex justify-content-center gap-3">
             <a href="https://www.facebook.com/">
-            <img src="assets/img/facebook.png" alt="Facebook" width="40">
+            <img src="<?= base_url('assets/img/facebook.png') ?>" alt="Facebook" width="40">
             </a>
             <a href="https://www.instagram.com/">
-            <img src="assets/img/ig.png" alt="Instagram" width="40">
+            <img src="<?= base_url('assets/img/ig.png') ?>" alt="Instagram" width="40">
             </a>
             <a href="https://www.tiktok.com/">
-            <img src="assets/img/tiktok.png" alt="TikTok" width="40">
+            <img src="<?= base_url('assets/img/tiktok.png') ?>" alt="TikTok" width="40">
             </a>
             <a href="https://wa.me/+543777622526">
-            <img src="assets/img/wpp.png" alt="WhatsApp" width="40">
+            <img src="<?= base_url('assets/img/wpp.png') ?>" alt="WhatsApp" width="40">
             </a>
         </div>
         </div>
     </div>
     </div>
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>

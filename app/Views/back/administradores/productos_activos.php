@@ -31,14 +31,15 @@
                     <td><?= esc($producto['stock']) ?></td>
                     <td><?= esc($producto['stock_min']) ?></td>
                     <td>
-                        <!-- Aquí podés agregar acciones como editar o eliminar -->
-                        <a href="#" class="btn btn-sm btn-primary disabled">Editar</a>
-                        <a href="#" class="btn btn-sm btn-danger disabled">Eliminar</a>
+                        <a href="<?= base_url('productos/edit/' . $producto['id']) ?>" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="<?= base_url('productos/delete/' . $producto['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
                     </td>
+
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 
     <a href="<?= base_url('altaproducto'); ?>" class="btn btn-success mt-3">Agregar nuevo producto</a>
+    <a href="<?= base_url('productos/eliminados'); ?>" class="btn btn-danger mt-3">Productos eliminados</a>
 </div>

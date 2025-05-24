@@ -88,4 +88,77 @@ class Producto_controller extends Controller
             return $this->response->redirect(site_url('crear'));
         }
     }
+
+    public function edit($id)
+    {
+        $productoModel = new Producto_Model();
+        $categoriaModel = new categoria_model();
+
+        $data['producto'] = $productoModel->find($id); 
+        $data['categorias'] = $categoriaModel->getCategorias();
+
+        if (!$data['producto']) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Producto no encontrado');
+        }
+
+        $dato['titulo'] = 'Editar producto';
+        echo view('front/head_view',$dato);
+        echo view('front/nav_view');
+        echo view('back/administradores/editar_producto_view', $data);
+        echo view('front/footer_view');
+    }
+
+    public function update($id)
+    {
+        $productoModel = new Producto_Model();
+
+        $data = [
+            'nombre_prod' => $this->request->getVar('nombre_prod'),
+            'categoria_id' => $this->request->getVar('categoria'),
+            'precio' => $this->request->getVar('precio'),
+            'precio_vta' => $this->request->getVar('precio_vta'),
+            'stock' => $this->request->getVar('stock'),
+            'stock_min' => $this->request->getVar('stock_min'),
+        ];
+
+        // Si se subió una nueva imagen
+        $img = $this->request->getFile('imagen');
+        if ($img && $img->isValid()) {
+            $nombre_aleatorio = $img->getRandomName();
+            $img->move(ROOTPATH . 'assets/uploads', $nombre_aleatorio);
+            $data['imagen'] = $nombre_aleatorio;
+        }
+
+        $productoModel->update($id, $data);
+        session()->setFlashdata('success', 'Producto actualizado');
+        return redirect()->to(site_url('productos'));
+    }
+
+    public function delete($id)
+    {
+        $productoModel = new Producto_Model();
+        $productoModel->update($id, ['activo' => 0]); // Baja lógica
+        session()->setFlashdata('success', 'Producto eliminado');
+        return redirect()->to(site_url('productos'));
+    }
+
+    public function eliminados()
+    {
+        $productoModel = new Producto_Model();
+        $data['productos'] = $productoModel->where('activo', 0)->findAll();
+        $dato['titulo'] = 'Productos eliminados';
+
+        echo view('front/head_view', $dato);
+        echo view('front/nav_view');
+        echo view('back/administradores/productos_eliminados', $data);
+        echo view('front/footer_view');
+    }
+
+    public function reactivar($id)
+    {
+        $productoModel = new Producto_Model();
+        $productoModel->update($id, ['activo' => 1]);
+        session()->setFlashdata('success', 'Producto reactivado');
+        return redirect()->to(site_url('productos/eliminados'));
+    }
 }

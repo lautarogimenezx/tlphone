@@ -46,9 +46,24 @@ $routes->get('/iniciosesion', 'Login_controller::index');
 $routes->post('/iniciosesion', 'Login_controller::auth');
 $routes->get('/logout', 'Login_controller::logout');
 
-$routes->get('/altaproducto', 'Producto_controller::creaproducto');
-$routes->post('/productos/store', 'Producto_controller::store');
-$routes->get('/productosactivos', 'Producto_controller::index');
+
+$routes->get('productosactivos', 'Producto_controller::index'); // Ver productos activos
+$routes->get('altaproducto', 'Producto_controller::creaproducto'); // Formulario de alta
+$routes->post('productos/store', 'Producto_controller::store'); // Guardar nuevo producto
+
+// 🛠️ Editar y actualizar
+$routes->get('productos/edit/(:num)', 'Producto_controller::edit/$1'); // Formulario de edición
+$routes->post('productos/update/(:num)', 'Producto_controller::update/$1'); // Guardar cambios
+
+// ❌ Eliminar (baja lógica)
+$routes->get('productos/delete/(:num)', 'Producto_controller::delete/$1');
+
+// 🗃️ Ver productos eliminados
+$routes->get('productos/eliminados', 'Producto_controller::eliminados');
+
+// 🔁 Reactivar producto eliminado
+$routes->get('productos/reactivar/(:num)', 'Producto_controller::reactivar/$1');
+
 
 
 $routes->get('/nosotros', 'Home::nosotros');

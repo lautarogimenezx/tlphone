@@ -10,7 +10,7 @@
 
     <div class="container-fluid">
     <a class="navbar-brand fw-bold" href="<?php echo base_url('');?>">
-        <img src="assets/img/logo.png" alt="Logo" height="60">
+        <img src="<?= base_url('assets/img/logo.png') ?>" alt="Logo" height="60">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
