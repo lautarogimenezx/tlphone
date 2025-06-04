@@ -131,7 +131,7 @@ class Home extends BaseController
         $data['titulo']='Carrito de compras | tlphone';
         echo view('front/head_view',$data);
         echo view('front/nav_view');
-        echo view('front/carrito');
+        echo view('back/usuario/carrito');
         echo view('front/whatsapp_view');
         echo view('front/footer_view');
     }
@@ -143,15 +143,6 @@ class Home extends BaseController
         echo view('front/nav_view');
         echo view('front/favoritos');
         echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
-
-    public function administracion()
-    {
-        $data['titulo']='Administración | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('back/administradores/administracion');
         echo view('front/footer_view');
     }
 }

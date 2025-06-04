@@ -139,7 +139,7 @@ class Producto_controller extends Controller
         $productoModel = new Producto_Model();
         $productoModel->update($id, ['eliminado' => 'SI']); // Baja lógica con 'SI'
         session()->setFlashdata('success', 'Producto eliminado');
-        return redirect()->to(site_url('productos/eliminados'));
+        return redirect()->to(site_url('productosactivos'));
     }
 
     public function eliminados()
@@ -159,6 +159,6 @@ class Producto_controller extends Controller
         $productoModel = new Producto_Model();
         $productoModel->update($id, ['eliminado' => 'NO']); // Reactivar con 'NO'
         session()->setFlashdata('success', 'Producto reactivado');
-        return redirect()->to(site_url('productosactivos'));
+        return redirect()->to(site_url('productos/eliminados'));
     }
 }

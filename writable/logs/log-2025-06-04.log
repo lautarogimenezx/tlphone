@@ -1,0 +1,152 @@
+CRITICAL - 2025-06-04 15:54:11 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carrito]
+in APPPATH\Views\back\usuario\carrito.php on line 17.
+ 1 APPPATH\Views\back\usuario\carrito.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(134): view('back/usuario/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 15:54:15 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carrito]
+in APPPATH\Views\back\usuario\carrito.php on line 17.
+ 1 APPPATH\Views\back\usuario\carrito.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(134): view('back/usuario/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 15:57:32 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carrito]
+in APPPATH\Views\back\usuario\carrito.php on line 17.
+ 1 APPPATH\Views\back\usuario\carrito.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(134): view('back/usuario/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 15:57:35 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carrito]
+in APPPATH\Views\back\usuario\carrito.php on line 17.
+ 1 APPPATH\Views\back\usuario\carrito.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(134): view('back/usuario/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 15:59:44 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carrito]
+in APPPATH\Views\back\usuario\carrito.php on line 17.
+ 1 APPPATH\Views\back\usuario\carrito.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(134): view('back/usuario/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 15:59:50 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carrito]
+in APPPATH\Views\back\usuario\carrito.php on line 17.
+ 1 APPPATH\Views\back\usuario\carrito.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\usuario\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/usuario/carrito', [], true)
+ 5 APPPATH\Controllers\Home.php(134): view('back/usuario/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->carrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 16:02:23 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: carrito]
+in APPPATH\Controllers\carrito_controller.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\tlphone\\app\\Controllers\\carrito_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\carrito_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\carrito_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\carrito_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 16:03:06 --> ErrorException: Cannot use App\Models\Carrito_model as Carrito_model because the name is already in use
+[Method: GET, Route: carrito]
+in APPPATH\Controllers\carrito_controller.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-06-04 16:04:00 --> ErrorException: Cannot use App\Models\Carrito_model as Carrito_model because the name is already in use
+[Method: GET, Route: carrito]
+in APPPATH\Controllers\carrito_controller.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-06-04 16:04:02 --> ErrorException: Cannot use App\Models\Carrito_model as Carrito_model because the name is already in use
+[Method: GET, Route: carrito]
+in APPPATH\Controllers\carrito_controller.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-06-04 16:04:52 --> ErrorException: Cannot use App\Models\Carrito_model as Carrito_model because the name is already in use
+[Method: GET, Route: carrito]
+in APPPATH\Controllers\carrito_controller.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-06-04 16:12:24 --> ErrorException: Undefined variable $cart
+[Method: GET, Route: carrito]
+in APPPATH\Controllers\carrito_controller.php on line 22.
+ 1 APPPATH\Controllers\carrito_controller.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cart', 'C:\\xampp\\htdocs\\tlphone\\app\\Controllers\\carrito_controller.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\carrito_controller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 16:13:01 --> TypeError: view(): Argument #2 ($data) must be of type array, CodeIgniterCart\Cart given, called in C:\xampp\htdocs\tlphone\app\Controllers\carrito_controller.php on line 26
+[Method: GET, Route: carrito]
+in SYSTEMPATH\Common.php on line 1161.
+ 1 APPPATH\Controllers\carrito_controller.php(26): view('back/usuario/carrito', Object(CodeIgniterCart\Cart))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\carrito_controller->carrito()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 16:13:03 --> TypeError: view(): Argument #2 ($data) must be of type array, CodeIgniterCart\Cart given, called in C:\xampp\htdocs\tlphone\app\Controllers\carrito_controller.php on line 26
+[Method: GET, Route: carrito]
+in SYSTEMPATH\Common.php on line 1161.
+ 1 APPPATH\Controllers\carrito_controller.php(26): view('back/usuario/carrito', Object(CodeIgniterCart\Cart))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\carrito_controller->carrito()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-04 16:14:12 --> TypeError: view(): Argument #2 ($data) must be of type array, CodeIgniterCart\Cart given, called in C:\xampp\htdocs\tlphone\app\Controllers\carrito_controller.php on line 26
+[Method: GET, Route: carrito]
+in SYSTEMPATH\Common.php on line 1161.
+ 1 APPPATH\Controllers\carrito_controller.php(26): view('back/usuario/carrito', Object(CodeIgniterCart\Cart))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\carrito_controller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\carrito_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

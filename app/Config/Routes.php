@@ -39,32 +39,18 @@ $routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1');
 
 
 $routes->get('/enviarlogin', 'Login_controller::auth');
-
-$routes->get('/administracion', 'Home::administracion');
-
-
-$routes->get('/iniciosesion', 'Login_controller::index');
-
 $routes->get('/iniciosesion', 'Login_controller::index');
 $routes->post('/iniciosesion', 'Login_controller::auth');
-$routes->get('/logout', 'Login_controller::logout');
+$routes->get('/logout', 'Login_controller::logout'); 
 
 
-$routes->get('productosactivos', 'Producto_controller::index'); // Ver productos activos
-$routes->get('altaproducto', 'Producto_controller::creaproducto'); // Formulario de alta
-$routes->post('productos/store', 'Producto_controller::store'); // Guardar nuevo producto
-
-// 🛠️ Editar y actualizar
-$routes->get('productos/edit/(:num)', 'Producto_controller::edit/$1'); // Formulario de edición
-$routes->post('productos/update/(:num)', 'Producto_controller::update/$1'); // Guardar cambios
-
-// ❌ Eliminar (baja lógica)
+$routes->get('productosactivos', 'Producto_controller::index');
+$routes->get('altaproducto', 'Producto_controller::creaproducto');
+$routes->post('productos/store', 'Producto_controller::store');
+$routes->get('productos/edit/(:num)', 'Producto_controller::edit/$1');
+$routes->post('productos/update/(:num)', 'Producto_controller::update/$1');
 $routes->get('productos/delete/(:num)', 'Producto_controller::delete/$1');
-
-// 🗃️ Ver productos eliminados
 $routes->get('productos/eliminados', 'Producto_controller::eliminados');
-
-// 🔁 Reactivar producto eliminado
 $routes->get('productos/reactivar/(:num)', 'Producto_controller::reactivar/$1');
 
 
@@ -82,8 +68,7 @@ $routes->get('/comercializacion', 'Home::comercializacion');
 $routes->get('/carrito', 'Home::carrito');
 $routes->get('/favoritos', 'Home::favoritos');
 
-
-
+$routes->get('/carrito', 'carrito_controller::index');
 
 /*
  * --------------------------------------------------------------------
