@@ -1,5 +1,5 @@
 <div class="container mt-4">
-    <h2 class="text-center p-2" style="background-color: #d49353;">Productos en tu Carrito</h2>
+    <h2 class="text-center p-2">Productos en tu Carrito</h2>
 
     <table class="table table-bordered text-center">
         <thead class="bg-dark text-white">
@@ -55,3 +55,4 @@
         <a href="<?= base_url('comprar') ?>" class="btn btn-secondary">Comprar</a>
     </div>
 </div>
+<br>

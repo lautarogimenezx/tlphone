@@ -65,7 +65,6 @@ $routes->get('/cargadores', 'Home::cargadores');
 $routes->get('/fundas', 'Home::fundas');
 $routes->get('/terminos', 'Home::terminos');
 $routes->get('/comercializacion', 'Home::comercializacion');
-$routes->get('/carrito', 'Home::carrito');
 $routes->get('/favoritos', 'Home::favoritos');
 
 $routes->get('/carrito', 'carrito_controller::index');
