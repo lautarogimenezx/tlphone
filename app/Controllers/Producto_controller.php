@@ -131,7 +131,7 @@ class Producto_controller extends Controller
 
         $productoModel->update($id, $data);
         session()->setFlashdata('success', 'Producto actualizado');
-        return redirect()->to(site_url('productos'));
+        return redirect()->to(site_url('productosactivos'));
     }
 
     public function delete($id)
@@ -160,5 +160,32 @@ class Producto_controller extends Controller
         $productoModel->update($id, ['eliminado' => 'NO']); // Reactivar con 'NO'
         session()->setFlashdata('success', 'Producto reactivado');
         return redirect()->to(site_url('productos/eliminados'));
+    }
+
+    public function catalogo($categoriaId = null)
+    {
+        $productoModel = new Producto_Model();
+        $categoriaModel = new categoria_model();
+
+        $data['categorias'] = $categoriaModel->getCategorias();
+
+        if ($categoriaId) {
+            $data['productos'] = $productoModel
+                ->where('categoria_id', $categoriaId)
+                ->where('eliminado', 'NO')
+                ->findAll();
+        } else {
+            $data['productos'] = $productoModel->getProductoAll();
+        }
+
+        // ➕ Agregamos el id de la categoría actual para marcarla en la vista
+        $data['categoria_actual'] = $categoriaId;
+
+        $dato['titulo'] = 'Catálogo';
+
+        echo view('front/head_view', $dato);
+        echo view('front/nav_view');
+        echo view('front/catalogo_view', $data);
+        echo view('front/footer_view');
     }
 }

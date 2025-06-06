@@ -35,66 +35,6 @@ class Home extends BaseController
         echo view('front/whatsapp_view');
         echo view('front/footer_view');
     }
-
-    public function celulares()
-    {
-        $data['titulo']='Celulares | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('front/celulares');
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
-
-    public function relojes()
-    {
-        $data['titulo']='Relojes | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('front/relojes');
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
-
-    public function auriculares()
-    {
-        $data['titulo']='Auriculares | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('front/auriculares');
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
-
-    public function parlantes()
-    {
-        $data['titulo']='Parlantes | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('front/parlantes');
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
-
-    public function cargadores()
-    {
-        $data['titulo']='Cargadores | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('front/cargadores');
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
-
-    public function fundas()
-    {
-        $data['titulo']='Fundas | tlphone';
-        echo view('front/head_view',$data);
-        echo view('front/nav_view');
-        echo view('front/fundas');
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
-    }
     
     public function terminos()
     {

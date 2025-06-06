@@ -24,19 +24,23 @@
 <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarContent">
     <!-- Menú de la izquierda -->
     <ul class="navbar-nav me-3">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-                Categorías
-            </a>
+        <li class="nav-item dropdown d-flex align-items-center">
+            <!-- Enlace "Catálogo" que va a todos los productos -->
+            <a class="nav-link text-white" href="<?= base_url('catalogo'); ?>">Catálogo</a>
+
+            <!-- Botón para desplegar el menú -->
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 0.2rem;"></a>
+
             <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="<?= base_url('celulares'); ?>">Celulares</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('relojes'); ?>">Relojes</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('auriculares'); ?>">Auriculares</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('parlantes'); ?>">Parlantes</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('cargadores'); ?>">Cargadores</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('fundas'); ?>">Fundas</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('catalogo/1'); ?>">Celulares</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('catalogo/2'); ?>">Relojes</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('catalogo/3'); ?>">Auriculares</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('catalogo/4'); ?>">Parlantes</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('catalogo/5'); ?>">Cargadores</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('catalogo/6'); ?>">Fundas</a></li>
             </ul>
         </li>
+
         <li class="nav-item"><a class="nav-link" href="<?= base_url('nosotros'); ?>">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="<?= base_url('contacto'); ?>">Contacto</a></li>
     </ul>

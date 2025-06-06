@@ -37,14 +37,14 @@ $routes->get('/usuarios', 'Usuarios_controller::index');
 $routes->get('usuarios/baja/(:num)', 'Usuarios_controller::baja/$1');
 $routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1');
 
-
 $routes->get('/enviarlogin', 'Login_controller::auth');
 $routes->get('/iniciosesion', 'Login_controller::index');
 $routes->post('/iniciosesion', 'Login_controller::auth');
 $routes->get('/logout', 'Login_controller::logout'); 
 
-
 $routes->get('productosactivos', 'Producto_controller::index');
+$routes->get('catalogo', 'Producto_controller::catalogo');
+$routes->get('catalogo/(:num)', 'Producto_controller::catalogo/$1');
 $routes->get('altaproducto', 'Producto_controller::creaproducto');
 $routes->post('productos/store', 'Producto_controller::store');
 $routes->get('productos/edit/(:num)', 'Producto_controller::edit/$1');
@@ -53,16 +53,8 @@ $routes->get('productos/delete/(:num)', 'Producto_controller::delete/$1');
 $routes->get('productos/eliminados', 'Producto_controller::eliminados');
 $routes->get('productos/reactivar/(:num)', 'Producto_controller::reactivar/$1');
 
-
-
 $routes->get('/nosotros', 'Home::nosotros');
 $routes->get('/contacto', 'Home::contacto');
-$routes->get('/celulares', 'Home::celulares');
-$routes->get('/relojes', 'Home::relojes');
-$routes->get('/auriculares', 'Home::auriculares');
-$routes->get('/parlantes', 'Home::parlantes');
-$routes->get('/cargadores', 'Home::cargadores');
-$routes->get('/fundas', 'Home::fundas');
 $routes->get('/terminos', 'Home::terminos');
 $routes->get('/comercializacion', 'Home::comercializacion');
 $routes->get('/favoritos', 'Home::favoritos');

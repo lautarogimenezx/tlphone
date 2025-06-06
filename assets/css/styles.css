@@ -44,3 +44,9 @@ body {
 .card:hover {
     transform: scale(1.05); /* Agranda un 5% cuando pasas el mouse */
 }
+
+.img-tarjetas {
+    max-height: 200px;
+    object-fit: contain;
+}
+
