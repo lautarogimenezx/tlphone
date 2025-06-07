@@ -48,11 +48,14 @@ class carrito_controller extends BaseController
                 'qty'     => 1,
                 'name'    => $request->getPost('nombre_prod'),
                 'price'   => $request->getPost('precio_vta'),
-                'options' => ['imagen' => $request->getPost('imagen')]
+                'options' => [
+                    'imagen' => base_url('assets/uploads/' . $request->getPost('imagen'))
+                ]
             ]);
 
             return redirect()->back()->withInput();
         }
+
 
 
 
