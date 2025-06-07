@@ -59,7 +59,12 @@ $routes->get('/terminos', 'Home::terminos');
 $routes->get('/comercializacion', 'Home::comercializacion');
 $routes->get('/favoritos', 'Home::favoritos');
 
-$routes->get('/carrito', 'carrito_controller::index');
+$routes->post('carrito/add', 'Carrito_controller::add');
+$routes->post('carrito/actualiza_carrito', 'Carrito_controller::actualiza_carrito');
+$routes->post('carrito/eliminar_item', 'Carrito_controller::eliminar_item');
+$routes->post('carrito/vaciar_carrito', 'Carrito_controller::vaciar_carrito');
+$routes->get('carrito', 'Carrito_controller::index');
+
 
 /*
  * --------------------------------------------------------------------

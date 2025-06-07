@@ -41,7 +41,7 @@
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 text-center">
 
         <div class="col">
-            <a href="<?php echo base_url('celulares');?>" class="text-decoration-none text-reset">
+            <a href="<?php echo base_url('catalogo/1');?>" class="text-decoration-none text-reset">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="assets/img/Iphone.png" class="card-img-top mx-auto mt-3 img-cat" alt="Celulares">
                     <div class="card-body">
@@ -52,7 +52,7 @@
         </div>
 
         <div class="col">
-            <a href="<?php echo base_url('relojes');?>" class="text-decoration-none text-reset">
+            <a href="<?php echo base_url('catalogo/2');?>" class="text-decoration-none text-reset">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="assets/img/Relojes.png" class="card-img-top mx-auto mt-3 img-cat" alt="Relojes">
                     <div class="card-body">
@@ -63,7 +63,7 @@
         </div>
 
         <div class="col">
-            <a href="<?php echo base_url('auriculares');?>" class="text-decoration-none text-reset">
+            <a href="<?php echo base_url('catalogo/3');?>" class="text-decoration-none text-reset">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="assets/img/Auriculares.png" class="card-img-top mx-auto mt-3 img-cat" alt="Auriculares">
                     <div class="card-body">
@@ -74,7 +74,7 @@
         </div>
 
         <div class="col">
-            <a href="<?php echo base_url('parlantes');?>" class="text-decoration-none text-reset">
+            <a href="<?php echo base_url('catalogo/4');?>" class="text-decoration-none text-reset">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="assets/img/Parlantes1.png" class="card-img-top mx-auto mt-3 img-cat" alt="Parlantes">
                     <div class="card-body">
@@ -85,7 +85,7 @@
         </div>
 
         <div class="col">
-            <a href="<?php echo base_url('cargadores');?>" class="text-decoration-none text-reset">
+            <a href="<?php echo base_url('catalogo/5');?>" class="text-decoration-none text-reset">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="assets/img/Cargadores.png" class="card-img-top mx-auto mt-3 img-cat" alt="Cargadores">
                     <div class="card-body">
@@ -96,7 +96,7 @@
         </div>
 
         <div class="col">
-            <a href="<?php echo base_url('fundas');?>" class="text-decoration-none text-reset">
+            <a href="<?php echo base_url('catalogo/6');?>" class="text-decoration-none text-reset">
                 <div class="card h-100 border-0 shadow-sm">
                     <img src="assets/img/Fundas.png" class="card-img-top mx-auto mt-3 img-cat" alt="Fundas">
                     <div class="card-body">

@@ -17,7 +17,7 @@
             <?php foreach ($cart->contents() as $item): ?>
                 <tr class="bg-light">
                     <td>
-                        <img src="<?= base_url('uploads/' . $item['imagen']) ?>" width="80">
+                    <img src="<?= base_url('uploads/' . $item['options']['imagen']) ?>" width="80">
                     </td>
                     <td><?= esc($item['name']) ?></td>
                     <td>$ <?= number_format($item['price'], 2) ?></td>

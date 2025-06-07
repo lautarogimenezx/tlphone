@@ -29,17 +29,29 @@
                 <div class="col">
                     <div class="card text-center h-100 position-relative">
                         <button class="btn position-absolute top-0 end-0 m-2 fs-2 text-transparent border-0">🤍</button>
+
                         <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" 
                              class="card-img-top object-fit-contain img-tarjetas" 
                              alt="<?= esc($producto['nombre_prod']) ?>">
+
                         <div class="card-body">
                             <span class="badge mb-2 bg-warning">ENVÍO GRATIS</span>
+
                             <h4>$<?= esc(number_format($producto['precio_vta'], 2, ',', '.')) ?></h4>
                             <p class="text-muted small">
                                 Precio sin impuestos nacionales $<?= esc(number_format($producto['precio'], 2, ',', '.')) ?>
                             </p>
                             <p><?= esc($producto['nombre_prod']) ?></p>
-                            <a href="#" class="btn btn-dark w-100">Agregar al carrito</a>
+
+                            <!-- Formulario funcional para agregar al carrito -->
+                            <form action="<?= base_url('carrito/add') ?>" method="post">
+                                <input type="hidden" name="id" value="<?= $producto['id'] ?>">
+                                <input type="hidden" name="nombre_prod" value="<?= $producto['nombre_prod'] ?>">
+                                <input type="hidden" name="precio_vta" value="<?= $producto['precio_vta'] ?>">
+                                <input type="hidden" name="imagen" value="<?= $producto['imagen'] ?>">
+
+                                <button type="submit" class="btn btn-dark w-100">Agregar al carrito</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -51,3 +63,5 @@
         <?php endif; ?>
     </div>
 </div>
+
+<br>

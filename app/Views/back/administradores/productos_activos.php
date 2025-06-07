@@ -1,11 +1,16 @@
-<div class="container mt-5 mb-5">
-    <h2 class="text-center mb-4">Productos Activos</h2>
+<div class="container mt-3 mb-3">
 
     <?php if (session()->getFlashdata('success')): ?>
         <div class="alert alert-success">
             <?= session()->getFlashdata('success') ?>
         </div>
     <?php endif; ?>
+
+    <a href="<?= base_url('altaproducto'); ?>" class="btn btn-success mt-3">Agregar nuevo producto</a>
+    <a href="<?= base_url('productos/eliminados'); ?>" class="btn btn-danger mt-3">Productos eliminados</a>
+
+    <br>
+    <br>
 
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
@@ -39,7 +44,4 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
-    <a href="<?= base_url('altaproducto'); ?>" class="btn btn-success mt-3">Agregar nuevo producto</a>
-    <a href="<?= base_url('productos/eliminados'); ?>" class="btn btn-danger mt-3">Productos eliminados</a>
 </div>
