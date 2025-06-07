@@ -119,5 +119,33 @@ public function vaciar_carrito()
     return redirect()->back()->with('mensaje', 'Carrito vaciado con éxito.');
 }
 
+// Devuelve el contenido actual del carrito
+public function devolver_carrito()
+{
+    $cart = \Config\Services::Cart();
+    return $cart->contents();
+}
+
+public function finalizarCompra()
+{
+    $data['titulo'] = 'Confirmar Compra';
+    $cart = \Config\Services::Cart();
+
+    if (empty($cart->contents())) {
+        return redirect()->to(base_url('carrito'))->with('mensaje', 'Tu carrito está vacío.');
+    }
+
+    echo view('front/head_view', $data);
+    echo view('front/nav_view');
+    echo view('back/compras/finalizar_compra', ['cart' => $cart]);
+    echo view('front/footer_view');
+}
+
+public function borrar_carrito()
+{
+    $cart = \Config\Services::Cart();
+    $cart->destroy();
+}
+
 }
 

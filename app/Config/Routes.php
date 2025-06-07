@@ -64,6 +64,14 @@ $routes->post('carrito/add', 'Carrito_controller::add');
 $routes->post('carrito/actualiza_carrito', 'Carrito_controller::actualiza_carrito');
 $routes->post('carrito/eliminar_item', 'Carrito_controller::eliminar_item');
 $routes->post('carrito/vaciar_carrito', 'Carrito_controller::vaciar_carrito');
+$routes->get('compras/mis_compras', 'Carrito_controller::verComprasUsuario');
+$routes->get('factura/ver/(:num)', 'Carrito_controller::verFactura/$1');
+$routes->get('carrito/finalizar_compra', 'Carrito_controller::finalizarCompra');
+
+$routes->get('ventas/mis_compras', 'Ventas_controller::mis_compras');
+$routes->get('ventas/ver_factura/(:num)', 'Ventas_controller::ver_factura/$1');
+$routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta');
+$routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta'); 
 
 
 

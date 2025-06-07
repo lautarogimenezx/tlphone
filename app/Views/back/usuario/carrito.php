@@ -71,7 +71,7 @@
                 <button type="submit" class="btn btn-warning">Vaciar Carrito</button>
             </form>
 
-            <a href="<?= base_url('ruta/a/checkout') ?>" class="btn btn-success">Proceder al pago</a>
+            <a href="<?= base_url('carrito/finalizar_compra') ?>" class="btn btn-success">Proceder al pago</a>
         </div>
     <?php endif; ?>
 </div>

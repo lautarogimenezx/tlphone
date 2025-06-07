@@ -13,8 +13,8 @@ class Producto_model extends Model
     {
         $db = \Config\Database::connect();
         $builder = $db->table('productos');
-        $builder->select('*');
-        $builder->join('categorias', 'categorias_id = productos.categoria_id');
+        $builder->select('productos.*, categorias.descripcion as categoria_desc');
+        $builder->join('categorias', 'categorias.id = productos.categoria_id');
 
         return $builder;
     }
@@ -30,14 +30,15 @@ class Producto_model extends Model
     
     public function updateStock($id = null, $stock_actual = null)
     {
-        $builder = $this->getBuilderProductos();
-        $builder->where('productos.id', $id);
-        $builder->set('productos.stock', $stock_actual);
-        $builder->update();
+        return $this->update($id, ['stock' => $stock_actual]);
     }
 
     public function getProductoAll()
     {
-        return $this->where('eliminado', 'NO')->findAll(); // Solo productos activos
+        $builder = $this->getBuilderProductos();
+        $builder->where('productos.eliminado', 'NO');
+        $query = $builder->get();
+
+        return $query->getResultArray();
     }
 }

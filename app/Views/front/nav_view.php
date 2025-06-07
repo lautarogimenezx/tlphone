@@ -116,7 +116,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                     <li><a class="dropdown-item" href="<?= base_url('perfil'); ?>">Mi perfil</a></li>
-                    <li><a class="dropdown-item" href="<?= base_url('compras'); ?>">Compras</a></li>
+                    <li><a class="dropdown-item" href="<?= base_url('ventas/mis_compras'); ?>">Compras</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="<?= base_url('logout'); ?>">Cerrar sesión</a></li>
                 </ul>
