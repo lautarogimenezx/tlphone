@@ -71,7 +71,8 @@ $routes->get('carrito/finalizar_compra', 'Carrito_controller::finalizarCompra');
 $routes->get('ventas/mis_compras', 'Ventas_controller::mis_compras');
 $routes->get('ventas/ver_factura/(:num)', 'Ventas_controller::ver_factura/$1');
 $routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta');
-$routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta'); 
+$routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta');
+$routes->get('ventas', 'Ventas_controller::todas_las_ventas');
 
 
 

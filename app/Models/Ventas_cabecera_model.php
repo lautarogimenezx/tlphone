@@ -7,12 +7,29 @@ use CodeIgniter\Model;
 class Ventas_cabecera_model extends Model
 {
     protected $table = 'ventas_cabecera';
-    protected $primaryKey = 'id'; // ajusta si tu clave primaria es distinta
-    protected $allowedFields = ['usuario_id', 'fecha', 'total']; // ajusta según tus columnas
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['usuario_id', 'fecha', 'total_venta'];
 
-    public function getVentas()
+    /**
+     * Devuelve todas las ventas del usuario dado, o todas si no se pasa ID.
+     */
+    public function getVentas($usuario_id = null)
     {
-        return $this->findAll(); // devuelve todas las filas de la tabla
+        if ($usuario_id !== null) {
+            return $this->where('usuario_id', $usuario_id)->findAll();
+        }
+
+        return $this->findAll(); // usado por el admin
+    }
+
+    /**
+     * Devuelve todas las ventas con info del usuario.
+     */
+    public function getTodasLasVentasConUsuarios()
+    {
+        return $this->select('ventas_cabecera.*, usuarios.id_usuarios, usuarios.nombre')
+                    ->join('usuarios', 'usuarios.id_usuarios = ventas_cabecera.usuario_id')
+                    ->orderBy('ventas_cabecera.fecha', 'DESC')
+                    ->findAll();
     }
 }
-

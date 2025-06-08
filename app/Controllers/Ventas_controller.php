@@ -30,6 +30,7 @@ class Ventas_controller extends Controller
             if ($producto && $producto['stock'] >= $item['qty']) {
                 $productos_validos[] = $item;
                 $total += $item['subtotal'];
+
             } else {
                 $productos_sin_stock[] = $item['name'];
                 $cartController->eliminar_item($item['rowid']);
@@ -58,7 +59,8 @@ class Ventas_controller extends Controller
                 'venta_id'    => $venta_id,
                 'producto_id' => $item['id'],
                 'cantidad'    => $item['qty'],
-                'precio'      => $item['subtotal']
+                'precio' => $item['price']
+
             ]);
 
             $producto = $productoModel->getProducto($item['id']);
@@ -76,6 +78,8 @@ class Ventas_controller extends Controller
         $id_usuario = $session->get('id_usuario');
 
         $ventasModel = new Ventas_cabecera_model();
+        
+        // Obtener solo las compras del usuario logueado
         $data['compras'] = $ventasModel->getVentas($id_usuario);
         $data['titulo'] = "Mis Compras";
 
@@ -85,28 +89,55 @@ class Ventas_controller extends Controller
         echo view('front/footer_view');
     }
 
-    public function ver_factura($venta_id)
-{
-    $detalleModel = new Ventas_detalle_model();
-    $ventasModel = new Ventas_cabecera_model();
 
-    $cabecera = $ventasModel->find($venta_id);
-    $detalle = $detalleModel->getDetalles($venta_id);
+public function ver_factura($venta_id)
+{
+    $session = session();
+    $usuario_id = $session->get('id_usuario');
+    $is_admin = $session->get('perfil_id') === '1'; 
+
+    $ventasModel = new Ventas_cabecera_model();
+    $detalleModel = new Ventas_detalle_model();
+
+    if ($is_admin) {
+        // Admin puede ver cualquier venta
+        $cabecera = $ventasModel->find($venta_id);
+    } else {
+        // Usuario común: solo puede ver sus ventas
+        $cabecera = $ventasModel
+            ->where('id', $venta_id)
+            ->where('usuario_id', $usuario_id)
+            ->first();
+    }
 
     if (!$cabecera) {
-        throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada');
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada o acceso no autorizado');
     }
+
+    $detalle = $detalleModel->getDetalles($venta_id);
 
     $data = [
         'cabecera' => $cabecera,
         'detalle' => $detalle,
-        'titulo' => "Factura de compra"
+        'titulo'   => "Factura de compra"
     ];
 
     echo view('front/head_view', $data);
     echo view('front/nav_view');
-    echo view('back/compras/ver_factura_usuario', $data); // ← vista correcta para la factura
+    echo view('back/compras/ver_factura_usuario', $data); // ← podés cambiar esta vista por otra para admin si querés
     echo view('front/footer_view');
 }
 
+
+    public function todas_las_ventas()
+{
+    $ventasModel = new \App\Models\Ventas_cabecera_model();
+    $data['ventas'] = $ventasModel->getTodasLasVentasConUsuarios();
+    $data['titulo'] = "Ventas Administrador";
+
+    echo view('front/head_view', $data);
+    echo view('front/nav_view');
+    echo view('back/compras/todas_las_ventas', $data);
+    echo view('front/footer_view');
+}
 }

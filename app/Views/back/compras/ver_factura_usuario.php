@@ -17,15 +17,15 @@
         <tbody>
             <?php foreach ($detalle as $item) : ?>
                 <tr>
-                    <td><?= $item['nombre'] ?></td>
-                    <td>$<?= number_format($item['precio'], 2) ?></td>
+                    <td><?= $item['nombre_prod'] ?></td>
+                    <td>$<?= number_format($item['precio_vta'], 2) ?></td>
                     <td><?= $item['cantidad'] ?></td>
-                    <td>$<?= number_format($item['precio'] * $item['cantidad'], 2) ?></td>
+                    <td>$<?= number_format($item['precio_vta'] * $item['cantidad'], 2) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 
-    <a href="<?= base_url('venta/mis_compras') ?>" class="btn btn-secondary mt-3">Volver a mis compras</a>
+    <a href="<?= base_url('ventas/mis_compras') ?>" class="btn btn-secondary mt-3">Volver a mis compras</a>
 </div>
 <br>

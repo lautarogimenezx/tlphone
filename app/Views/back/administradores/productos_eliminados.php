@@ -7,7 +7,7 @@
         </div>
     <?php endif; ?>
 
-    <table class="table table-bordered table-striped">
+    <table id="tablaProductos" class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
                 <th>Imagen</th>
@@ -41,3 +41,20 @@
     <a href="<?= base_url('productosactivos'); ?>" class="btn btn-primary mt-3">Volver a productos activos</a>
 </div>
 
+<script>
+    $(document).ready(function () {
+        $('#tablaProductos').DataTable({
+            "language": {
+                "search": "Buscar:",
+                "lengthMenu": "Mostrar _MENU_ entradas",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ ventas",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Último",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            }
+        });
+    });
+</script>
