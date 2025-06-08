@@ -1,5 +1,5 @@
 <!-- Comercialización -->
-<section class="container my-5">
+<section class="container my-4">
 <div class="text-center mb-3">
     <h2 class="fw-bold">Comercialización</h2>
     <p class="text-muted">Opciones de entrega y pago adaptadas a vos</p>

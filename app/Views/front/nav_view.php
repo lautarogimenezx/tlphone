@@ -122,12 +122,6 @@
                 </ul>
             </div>
 
-            <div class="favorites-wrapper position-relative me-3">
-                <a href="<?php echo base_url('favoritos');?>" class="text-white fs-5">
-                    <i class="fas fa-heart"></i>
-                </a>
-            </div>
-
             <?php $cart = \Config\Services::Cart(); ?>
             <div class="cart-wrapper position-relative me-3">
                 <a href="<?= base_url('carrito'); ?>" class="text-white fs-5">

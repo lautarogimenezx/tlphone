@@ -1,6 +1,6 @@
 <!-- Nosotros -->
-<section class="container my-5">
-<div class="text-center mb-5">
+<section class="container my-4">
+<div class="text-center mb-4">
     <h2 class="fw-bold">Nosotros</h2>
     <p class="mt-3">
     Somos <strong>TLPHONE</strong>, una empresa joven y dinámica dedicada a la venta de celulares y accesorios tecnológicos. Fundada por dos primos apasionados por la tecnología, nos enfocamos en brindar a nuestros clientes una experiencia de compra ágil, segura y confiable.
@@ -13,7 +13,7 @@
     </p>
 </div>
 
-<hr class="my-5">
+<hr class="my-4">
 
 <div class="text-center mb-4">
     <h3 class="fw-bold">Nuestro equipo</h3>

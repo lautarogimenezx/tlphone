@@ -28,11 +28,10 @@
             <?php foreach ($productos as $producto): ?>
                 <div class="col">
                     <div class="card text-center h-100 position-relative">
-                        <button class="btn position-absolute top-0 end-0 m-2 fs-2 text-transparent border-0">🤍</button>
 
                         <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" 
-                             class="card-img-top object-fit-contain img-tarjetas" 
-                             alt="<?= esc($producto['nombre_prod']) ?>">
+                            class="card-img-top object-fit-contain img-tarjetas" 
+                            alt="<?= esc($producto['nombre_prod']) ?>">
 
                         <div class="card-body">
                             <span class="badge mb-2 bg-warning">ENVÍO GRATIS</span>

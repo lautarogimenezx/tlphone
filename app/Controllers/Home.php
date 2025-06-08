@@ -6,8 +6,16 @@ class Home extends BaseController
 {
     public function index()
     {
-        $data['titulo']='tlphone | venta online';
-        $data['msg'] = session()->getFlashdata('msg');
+        $productoModel = new \App\Models\Producto_model();
+         // Productos destacados con ID específicos
+        $productosDestacados = $productoModel
+            ->whereIn('id', [20, 26, 38])
+            ->findAll();
+        $data = [
+        'titulo'=>'tlphone | venta online',
+        'msg' => session()->getFlashdata('msg'),
+        'productosDestacados' => $productosDestacados,
+        ];
 
         echo view('front/head_view',$data);
         echo view('front/nav_view');

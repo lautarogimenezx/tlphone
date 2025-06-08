@@ -40,6 +40,10 @@ class carrito_controller extends BaseController
 // Agrega items al carrito
         public function add()
         {
+            $session = session();
+            if (!$session->get('logged_in')) {
+                return redirect()->to('/iniciosesion')->with('mensaje', 'Debes iniciar sesión para agregar productos al carrito.');
+}
             $cart = \Config\Services::Cart();
             $request = \Config\Services::request();
 

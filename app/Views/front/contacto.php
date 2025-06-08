@@ -1,8 +1,8 @@
 <!-- Contacto -->
-<section class="bg-light mb-2 py-5" id="contacto">
+<section class="bg-light py-4" id="contacto">
 <div class="container">
-    <h2 class="text-center mb-4">Contacto</h2>
-    <p class="text-center text-muted mb-5">¿Tenés dudas? ¡Escribinos o vení a visitarnos!</p>
+    <h2 class="text-center mb-3">Contacto</h2>
+    <p class="text-center text-muted mb-4">¿Tenés dudas? ¡Escribinos o vení a visitarnos!</p>
     
     <div class="row g-4">
 
@@ -25,25 +25,29 @@
     </div>
 
     <!-- Formulario -->
-    <div class="col-md-6">
-        <div class="bg-white shadow-sm p-4 rounded">
+<div class="col-md-6">
+    <div class="bg-white shadow-sm p-4 rounded">
         <form>
             <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
             </div>
             <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
             </div>
             <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribí tu consulta..."></textarea>
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribí tu consulta..."></textarea>
             </div>
-            <button type="submit" class="btn btn-dark w-100">Enviar mensaje</button>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-dark w-100">Enviar mensaje</button>
+                <button type="reset" class="btn btn-outline-secondary w-100">Limpiar</button>
+            </div>
         </form>
-        </div>
     </div>
+</div>
 
     </div>
 </div>
