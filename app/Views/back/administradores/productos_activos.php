@@ -15,6 +15,7 @@
     <table id="tablaProductos" class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
+                <th>ID</th>
                 <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Precio</th>
@@ -27,6 +28,7 @@
         <tbody>
             <?php foreach ($productos as $producto): ?>
                 <tr>
+                    <td><?= esc($producto['id']) ?></td> <!-- NUEVA CELDA CON ID -->
                     <td>
                         <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="Imagen del producto" width="80">
                     </td>
@@ -39,7 +41,6 @@
                         <a href="<?= base_url('productos/edit/' . $producto['id']) ?>" class="btn btn-sm btn-primary">Editar</a>
                         <a href="<?= base_url('productos/delete/' . $producto['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
                     </td>
-
                 </tr>
             <?php endforeach; ?>
         </tbody>

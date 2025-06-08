@@ -32,7 +32,7 @@
         <div class="alert alert-info">No hay ventas registradas aún.</div>
     <?php endif; ?>
 </div>
-
+<br>
 <script>
     $(document).ready(function () {
         $('#tablaVentas').DataTable({

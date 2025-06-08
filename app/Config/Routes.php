@@ -74,6 +74,7 @@ $routes->get('ventas/ver_factura/(:num)', 'Ventas_controller::ver_factura/$1');
 $routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta');
 $routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta');
 $routes->get('ventas', 'Ventas_controller::todas_las_ventas');
+$routes->get('ventas/descargar_factura/(:num)', 'Ventas_controller::descargar_factura/$1');
 
 $routes->get('contacto', 'Consultas_controller::index');
 $routes->post('contacto/enviar', 'Consultas_controller::enviar');

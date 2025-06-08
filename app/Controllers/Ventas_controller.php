@@ -6,6 +6,8 @@ use CodeIgniter\Controller;
 use App\Models\Producto_model;
 use App\Models\Ventas_cabecera_model;
 use App\Models\Ventas_detalle_model;
+require_once(APPPATH . 'ThirdParty/dompdf/autoload.inc.php');
+use Dompdf\Dompdf;
 
 class Ventas_controller extends Controller
 {
@@ -100,15 +102,16 @@ public function ver_factura($venta_id)
     $detalleModel = new Ventas_detalle_model();
 
     if ($is_admin) {
-        // Admin puede ver cualquier venta
-        $cabecera = $ventasModel->find($venta_id);
+        $cabecera = $ventasModel->getCabeceraConUsuario($venta_id);
     } else {
-        // Usuario común: solo puede ver sus ventas
         $cabecera = $ventasModel
-            ->where('id', $venta_id)
-            ->where('usuario_id', $usuario_id)
+            ->select('ventas_cabecera.*, usuarios.nombre AS nombre_usuario')
+            ->join('usuarios', 'usuarios.id_usuarios = ventas_cabecera.usuario_id')
+            ->where('ventas_cabecera.id', $venta_id)
+            ->where('ventas_cabecera.usuario_id', $usuario_id)
             ->first();
     }
+
 
     if (!$cabecera) {
         throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada o acceso no autorizado');
@@ -139,5 +142,48 @@ public function ver_factura($venta_id)
     echo view('front/nav_view');
     echo view('back/compras/todas_las_ventas', $data);
     echo view('front/footer_view');
+}
+
+public function descargar_factura($venta_id)
+{
+    $session = session();
+    $usuario_id = $session->get('id_usuario');
+    $is_admin = $session->get('perfil_id') === '1';
+
+    $ventasModel = new \App\Models\Ventas_cabecera_model();
+    $detalleModel = new \App\Models\Ventas_detalle_model();
+
+    // Obtener cabecera con datos del usuario
+    if ($is_admin) {
+        $cabecera = $ventasModel->getCabeceraConUsuario($venta_id);
+    } else {
+        $cabecera = $ventasModel
+            ->where('id', $venta_id)
+            ->where('usuario_id', $usuario_id)
+            ->first();
+    }
+
+    if (!$cabecera) {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada o acceso no autorizado');
+    }
+
+    $detalle = $detalleModel->getDetalles($venta_id);
+
+    // Renderizar vista como HTML
+    $data = [
+        'cabecera' => $cabecera,
+        'detalle'  => $detalle
+    ];
+
+    $html = view('back/compras/factura_pdf', $data, ['saveData' => true]);
+
+    // Generar PDF
+    $dompdf = new Dompdf();
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('A4', 'portrait');
+    $dompdf->render();
+
+    // Descargar
+    $dompdf->stream("Factura_{$venta_id}.pdf", ['Attachment' => true]);
 }
 }

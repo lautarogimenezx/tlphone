@@ -1,6 +1,7 @@
 <div class="container mt-4">
     <h2 class="mb-4">Factura N° <?= $cabecera['id'] ?></h2>
 
+    <p><strong>Usuario:</strong> <?= esc($cabecera['nombre_usuario']) ?></p>
     <p><strong>Fecha:</strong> <?= $cabecera['fecha'] ?></p>
     <p><strong>Total:</strong> $<?= number_format($cabecera['total_venta'], 2) ?></p>
 
@@ -27,5 +28,6 @@
     </table>
 
     <a href="<?= base_url('ventas/mis_compras') ?>" class="btn btn-secondary mt-3">Volver a mis compras</a>
+    <a href="<?= base_url('ventas/descargar_factura/' . $cabecera['id']) ?>" class="btn btn-primary mt-3" target="_blank">Descargar Factura PDF</a>
 </div>
 <br>
