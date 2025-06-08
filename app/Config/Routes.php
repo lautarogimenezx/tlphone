@@ -36,6 +36,8 @@ $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
 $routes->get('/usuarios', 'Usuarios_controller::index');
 $routes->get('usuarios/baja/(:num)', 'Usuarios_controller::baja/$1');
 $routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1');
+$routes->get('usuario/perfil', 'Usuarios_controller::perfil');
+$routes->post('usuario/actualizar_perfil', 'Usuarios_controller::actualizar_perfil');
 
 $routes->get('/enviarlogin', 'Login_controller::auth');
 $routes->get('/iniciosesion', 'Login_controller::index');
@@ -73,6 +75,9 @@ $routes->get('ventas/ver_factura/(:num)', 'Ventas_controller::ver_factura/$1');
 $routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta');
 $routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta');
 $routes->get('ventas', 'Ventas_controller::todas_las_ventas');
+
+
+
 
 
 

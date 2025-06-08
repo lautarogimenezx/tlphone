@@ -88,4 +88,45 @@ class Usuarios_controller extends BaseController
         return redirect()->to(site_url('usuarios'));
     }
 
+public function perfil()
+{
+    $session = session();
+    $id = $session->get('id_usuario');
+
+    $usuarioModel = new \App\Models\Usuarios_model();
+    $data['usuario'] = $usuarioModel->getUsuarioPorId($id);
+    $data['titulo'] = "Mi Perfil";
+
+    echo view('front/head_view', $data);
+    echo view('front/nav_view');
+    echo view('back/usuario/mi_perfil', $data);
+    echo view('front/footer_view');
+}
+
+public function actualizar_perfil()
+{
+    $session = session();
+    $id = $session->get('id_usuario');
+
+    $usuarioModel = new \App\Models\Usuarios_model();
+
+    $data = [
+        'nombre'   => $this->request->getPost('nombre'),
+        'apellido' => $this->request->getPost('apellido'),
+        'email'    => $this->request->getPost('email'),
+        'usuario'  => $this->request->getPost('usuario'),
+    ];
+
+    if (!$this->validate([
+        'email'   => 'required|valid_email',
+        'nombre'  => 'required',
+        'usuario' => 'required'
+    ])) {
+        return redirect()->back()->withInput()->with('mensaje', 'Datos inválidos');
+    }
+
+    $usuarioModel->actualizarPerfil($id, $data);
+    $session->setFlashdata('mensaje', 'Perfil actualizado correctamente');
+    return redirect()->to(base_url('usuario/perfil'));
+}
 }
