@@ -28,7 +28,7 @@
         <div class="alert alert-info">Aún no has realizado ninguna compra.</div>
     <?php endif; ?>
 </div>
-
+<br>
 <script>
     $(document).ready(function () {
         $('#tablaCompras').DataTable({

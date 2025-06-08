@@ -7,22 +7,30 @@ class Home extends BaseController
     public function index()
     {
         $productoModel = new \App\Models\Producto_model();
-         // Productos destacados con ID específicos
+        $categoriaModel = new \App\Models\categoria_model();
+
+        // Productos destacados con ID específicos
         $productosDestacados = $productoModel
-            ->whereIn('id', [20, 26, 38])
+            ->whereIn('id', [16, 26, 38])
             ->findAll();
+
+        // Obtener categorías activas
+        $categorias = $categoriaModel->getCategorias();
+
         $data = [
-        'titulo'=>'tlphone | venta online',
-        'msg' => session()->getFlashdata('msg'),
-        'productosDestacados' => $productosDestacados,
+            'titulo' => 'tlphone | venta online',
+            'msg' => session()->getFlashdata('msg'),
+            'productosDestacados' => $productosDestacados,
+            'categorias' => $categorias
         ];
 
-        echo view('front/head_view',$data);
+        echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('front/home_view',$data);
+        echo view('front/home_view', $data);
         echo view('front/whatsapp_view');
         echo view('front/footer_view');
     }
+
 
     public function nosotros()
     {

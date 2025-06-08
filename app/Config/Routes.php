@@ -79,14 +79,6 @@ $routes->get('contacto', 'Consultas_controller::index');
 $routes->post('contacto/enviar', 'Consultas_controller::enviar');
 $routes->get('consultas', 'Consultas_controller::verConsultas');
 
-
-
-
-
-
-
-
-
 /*
  * --------------------------------------------------------------------
  * Additional Routing

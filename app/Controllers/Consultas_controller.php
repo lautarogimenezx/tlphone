@@ -33,31 +33,22 @@ class Consultas_controller extends BaseController
 
         $this->consultasModel->guardar_consulta($data);
 
-        $data['mensaje_exito'] = '¡Mensaje enviado con éxito!';
-        $data['titulo'] = 'Contacto | tlphone';
-
-        echo view('front/head_view', $data);
-        echo view('front/nav_view');
-        echo view('front/contacto', $data);
-        echo view('front/whatsapp_view');
-        echo view('front/footer_view');
+        return redirect()->to('/contacto')->with('mensaje_exito', '¡Mensaje enviado con éxito!');
     }
 
     public function verConsultas()
-{
-    $model = new \App\Models\Consultas_model();
-    $data['consultas'] = $model->orderBy('fecha', 'DESC')->findAll();
+    {
+        $model = new \App\Models\Consultas_model();
+        $data['consultas'] = $model->orderBy('fecha', 'DESC')->findAll();
 
-    $data['titulo'] = 'Consultas | tlphone';
+        $data['titulo'] = 'Consultas | tlphone';
 
-    echo view('front/head_view', $data);
-    echo view('front/nav_view');
-    echo view('back/administradores/consultas', $data);
-    echo view('front/whatsapp_view');
-    echo view('front/footer_view');
-}
-
-
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('back/administradores/consultas', $data);
+        echo view('front/whatsapp_view');
+        echo view('front/footer_view');
+    }
 }
 
 

@@ -29,10 +29,9 @@
     <div class="bg-white shadow-sm p-4 rounded">
         <form action="<?= base_url('contacto/enviar') ?>" method="post">
 
-
-            <?php if (isset($mensaje_exito)): ?>
+            <?php if (session()->getFlashdata('mensaje_exito')): ?>
                 <div class="alert alert-success">
-                    <?= $mensaje_exito ?>
+                    <?= session()->getFlashdata('mensaje_exito') ?>
                 </div>
             <?php endif; ?>
 
@@ -54,8 +53,9 @@
                 <button type="reset" class="btn btn-outline-secondary w-100">Limpiar</button>
             </div>
         </form>
-
     </div>
+</div>
+
 </div>
 
     </div>

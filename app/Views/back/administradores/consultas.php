@@ -5,7 +5,7 @@
         <div class="alert alert-info">No hay consultas aún.</div>
     <?php else: ?>
         <div class="table-responsive">
-            <table class="table table-bordered table-hover">
+            <table id="tablaConsultas" class="table table-bordered table-hover">
                 <thead class="table-dark">
                     <tr>
                         <th>ID</th>
@@ -30,3 +30,21 @@
         </div>
     <?php endif; ?>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#tablaConsultas').DataTable({
+            "language": {
+                "search": "Buscar:",
+                "lengthMenu": "Mostrar MENU entradas",
+                "info": "Mostrando START a END de TOTAL ventas",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Último",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            }
+        });
+});
+</script>
