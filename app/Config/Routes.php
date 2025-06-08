@@ -56,7 +56,6 @@ $routes->get('productos/eliminados', 'Producto_controller::eliminados');
 $routes->get('productos/reactivar/(:num)', 'Producto_controller::reactivar/$1');
 
 $routes->get('/nosotros', 'Home::nosotros');
-$routes->get('/contacto', 'Home::contacto');
 $routes->get('/terminos', 'Home::terminos');
 $routes->get('/comercializacion', 'Home::comercializacion');
 $routes->get('/favoritos', 'Home::favoritos');
@@ -75,6 +74,13 @@ $routes->get('ventas/ver_factura/(:num)', 'Ventas_controller::ver_factura/$1');
 $routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta');
 $routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta');
 $routes->get('ventas', 'Ventas_controller::todas_las_ventas');
+
+$routes->get('contacto', 'Consultas_controller::index');
+$routes->post('contacto/enviar', 'Consultas_controller::enviar');
+$routes->get('consultas', 'Consultas_controller::verConsultas');
+
+
+
 
 
 

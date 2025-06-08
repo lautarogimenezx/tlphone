@@ -27,18 +27,26 @@
     <!-- Formulario -->
 <div class="col-md-6">
     <div class="bg-white shadow-sm p-4 rounded">
-        <form>
+        <form action="<?= base_url('contacto/enviar') ?>" method="post">
+
+
+            <?php if (isset($mensaje_exito)): ?>
+                <div class="alert alert-success">
+                    <?= $mensaje_exito ?>
+                </div>
+            <?php endif; ?>
+
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
             </div>
             <div class="mb-3">
                 <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribí tu consulta..."></textarea>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta..." required></textarea>
             </div>
 
             <div class="d-flex gap-2">
@@ -46,6 +54,7 @@
                 <button type="reset" class="btn btn-outline-secondary w-100">Limpiar</button>
             </div>
         </form>
+
     </div>
 </div>
 
