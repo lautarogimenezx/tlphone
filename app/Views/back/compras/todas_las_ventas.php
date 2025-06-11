@@ -1,5 +1,5 @@
 <div class="container mt-4">
-    <h2 class="mb-4">Ventas (Administrador)</h2>
+    <h2 class="mb-4">Ventas</h2>
 
     <?php if (!empty($ventas)) : ?>
         <table id="tablaVentas" class="table table-bordered table-striped">

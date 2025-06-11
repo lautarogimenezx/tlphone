@@ -38,6 +38,7 @@
                         <?php else: ?>
                             <a href="<?= base_url('usuarios/baja/' . $u['id_usuarios']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que querés dar de baja este usuario?');">Dar de baja</a>
                         <?php endif; ?>
+                        <a href="<?= base_url('usuarios/cambiarRol/' . $u['id_usuarios']) ?>" class="btn btn-warning btn-sm ms-1">Cambiar rol</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

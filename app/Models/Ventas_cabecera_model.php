@@ -34,11 +34,11 @@ class Ventas_cabecera_model extends Model
     }
 
     public function getCabeceraConUsuario($venta_id)
-{
-    return $this->select('ventas_cabecera.*, usuarios.nombre AS nombre_usuario')
-        ->join('usuarios', 'usuarios.id_usuarios = ventas_cabecera.usuario_id')
-        ->where('ventas_cabecera.id', $venta_id)
-        ->first();
-}
+    {
+        return $this->select('ventas_cabecera.*, usuarios.nombre AS nombre_usuario')
+            ->join('usuarios', 'usuarios.id_usuarios = ventas_cabecera.usuario_id')
+            ->where('ventas_cabecera.id', $venta_id)
+            ->first();
+    }
 
 }

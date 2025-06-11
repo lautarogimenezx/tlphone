@@ -1,0 +1,10 @@
+CRITICAL - 2025-06-09 13:38:36 --> ErrorException: Undefined property: App\Controllers\Ventas_controller::$db
+[Method: GET, Route: ventas/descargar_factura/18]
+in APPPATH\Controllers\Ventas_controller.php on line 160.
+ 1 APPPATH\Controllers\Ventas_controller.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Ventas_controller::$db', 'C:\\xampp\\htdocs\\tlphone\\app\\Controllers\\Ventas_controller.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->descargar_factura('18')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

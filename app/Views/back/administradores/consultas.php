@@ -30,14 +30,14 @@
         </div>
     <?php endif; ?>
 </div>
-
+<br>
 <script>
     $(document).ready(function () {
         $('#tablaConsultas').DataTable({
             "language": {
                 "search": "Buscar:",
-                "lengthMenu": "Mostrar MENU entradas",
-                "info": "Mostrando START a END de TOTAL ventas",
+                "lengthMenu": "Mostrar _MENU_ entradas",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ ventas",
                 "paginate": {
                     "first": "Primero",
                     "last": "Último",
@@ -46,5 +46,5 @@
                 }
             }
         });
-});
+    });
 </script>

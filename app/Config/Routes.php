@@ -38,6 +38,7 @@ $routes->get('usuarios/baja/(:num)', 'Usuarios_controller::baja/$1');
 $routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1');
 $routes->get('usuario/perfil', 'Usuarios_controller::perfil');
 $routes->post('usuario/actualizar_perfil', 'Usuarios_controller::actualizar_perfil');
+$routes->get('usuarios/cambiarRol/(:num)', 'Usuarios_controller::cambiarRol/$1');
 
 $routes->get('/enviarlogin', 'Login_controller::auth');
 $routes->get('/iniciosesion', 'Login_controller::index');

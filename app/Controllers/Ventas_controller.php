@@ -144,46 +144,49 @@ public function ver_factura($venta_id)
     echo view('front/footer_view');
 }
 
-public function descargar_factura($venta_id)
-{
-    $session = session();
-    $usuario_id = $session->get('id_usuario');
-    $is_admin = $session->get('perfil_id') === '1';
+    public function descargar_factura($venta_id)
+    {
+        $session = session();
+        $usuario_id = $session->get('id_usuario');
+        $is_admin = $session->get('perfil_id') === '1';
 
-    $ventasModel = new \App\Models\Ventas_cabecera_model();
-    $detalleModel = new \App\Models\Ventas_detalle_model();
+        $ventasModel = new \App\Models\Ventas_cabecera_model();
+        $detalleModel = new \App\Models\Ventas_detalle_model();
 
-    // Obtener cabecera con datos del usuario
-    if ($is_admin) {
-        $cabecera = $ventasModel->getCabeceraConUsuario($venta_id);
-    } else {
-        $cabecera = $ventasModel
-            ->where('id', $venta_id)
-            ->where('usuario_id', $usuario_id)
+        // Obtener cabecera con datos del usuario (JOIN en ambos casos)
+        if ($is_admin) {
+            $cabecera = $ventasModel->getCabeceraConUsuario($venta_id);
+        } else {
+            $cabecera = $ventasModel
+            ->select('ventas_cabecera.*, usuarios.nombre AS nombre_usuario')
+            ->join('usuarios', 'usuarios.id_usuarios = ventas_cabecera.usuario_id')
+            ->where('ventas_cabecera.id', $venta_id)
+            ->where('ventas_cabecera.usuario_id', $usuario_id)
             ->first();
+        }
+
+        if (!$cabecera) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada o acceso no autorizado');
+        }
+
+        $detalle = $detalleModel->getDetalles($venta_id);
+
+        $data = [
+            'cabecera' => $cabecera,
+            'detalle'  => $detalle
+        ];
+
+        // Renderizar HTML
+        $html = view('back/compras/factura_pdf', $data, ['saveData' => true]);
+
+        // Generar PDF
+        $dompdf = new \Dompdf\Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+
+        // Descargar
+        $dompdf->stream("Factura_{$venta_id}.pdf", ['Attachment' => true]);
     }
 
-    if (!$cabecera) {
-        throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada o acceso no autorizado');
-    }
-
-    $detalle = $detalleModel->getDetalles($venta_id);
-
-    // Renderizar vista como HTML
-    $data = [
-        'cabecera' => $cabecera,
-        'detalle'  => $detalle
-    ];
-
-    $html = view('back/compras/factura_pdf', $data, ['saveData' => true]);
-
-    // Generar PDF
-    $dompdf = new Dompdf();
-    $dompdf->loadHtml($html);
-    $dompdf->setPaper('A4', 'portrait');
-    $dompdf->render();
-
-    // Descargar
-    $dompdf->stream("Factura_{$venta_id}.pdf", ['Attachment' => true]);
-}
 }

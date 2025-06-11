@@ -48,11 +48,11 @@ html, body {
 }
 
 .card {
-    transition: transform 0.3s ease; /* Suaviza la transición */
+    transition: transform 0.3s ease; 
 }
 
 .card:hover {
-    transform: scale(1.05); /* Agranda un 5% cuando pasas el mouse */
+    transform: scale(1.02);
 }
 
 .img-tarjetas {

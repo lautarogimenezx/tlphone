@@ -129,4 +129,22 @@ public function actualizar_perfil()
     $session->setFlashdata('mensaje', 'Perfil actualizado correctamente');
     return redirect()->to(base_url('usuario/perfil'));
 }
+
+    public function cambiarRol($id)
+    {
+        $usuarioModel = new \App\Models\Usuarios_model();
+        $usuario = $usuarioModel->find($id);
+
+        if ($usuario) {
+            // Cambiar de 1 a 2, o de 2 a 1
+            $nuevoRol = ($usuario['perfil_id'] == 1) ? 2 : 1;
+
+            $usuarioModel->update($id, ['perfil_id' => $nuevoRol]);
+
+            session()->setFlashdata('success', 'Rol del usuario actualizado');
+        }
+
+        return redirect()->to(site_url('usuarios'));
+    }
+
 }
