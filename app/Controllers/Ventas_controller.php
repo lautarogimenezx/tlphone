@@ -131,6 +131,45 @@ public function ver_factura($venta_id)
     echo view('front/footer_view');
 }
 
+public function ver_factura_admin($venta_id)
+{
+    $session = session();
+    $usuario_id = $session->get('id_usuario');
+    $is_admin = $session->get('perfil_id') === '1'; 
+
+    $ventasModel = new Ventas_cabecera_model();
+    $detalleModel = new Ventas_detalle_model();
+
+    if ($is_admin) {
+        $cabecera = $ventasModel->getCabeceraConUsuario($venta_id);
+    } else {
+        $cabecera = $ventasModel
+            ->select('ventas_cabecera.*, usuarios.nombre AS nombre_usuario')
+            ->join('usuarios', 'usuarios.id_usuarios = ventas_cabecera.usuario_id')
+            ->where('ventas_cabecera.id', $venta_id)
+            ->where('ventas_cabecera.usuario_id', $usuario_id)
+            ->first();
+    }
+
+
+    if (!$cabecera) {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('Factura no encontrada o acceso no autorizado');
+    }
+
+    $detalle = $detalleModel->getDetalles($venta_id);
+
+    $data = [
+        'cabecera' => $cabecera,
+        'detalle' => $detalle,
+        'titulo'   => "Factura de compra"
+    ];
+
+    echo view('front/head_view', $data);
+    echo view('front/nav_view');
+    echo view('back/compras/ver_factura_admin', $data); // ← podés cambiar esta vista por otra para admin si querés
+    echo view('front/footer_view');
+}
+
 
     public function todas_las_ventas()
 {

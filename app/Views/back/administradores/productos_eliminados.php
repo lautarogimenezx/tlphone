@@ -34,7 +34,13 @@
                     <td><?= esc($producto['stock_min']) ?></td>
                     <td>
                         <a href="<?= base_url('productos/reactivar/' . $producto['id']) ?>" class="btn btn-sm btn-success">Reactivar</a>
+                        <br>
+                        <form class= "mt-1" action="<?= base_url('productos/borrar_definitivo/' . $producto['id']) ?>" method="post" style="display:inline-block;" onsubmit="return confirm('¿Estás seguro que querés eliminar definitivamente este producto? Esta acción no se puede deshacer.');">
+                            <?= csrf_field() ?>
+                            <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                        </form>
                     </td>
+
                 </tr>
             <?php endforeach; ?>
         </tbody>

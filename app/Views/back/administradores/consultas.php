@@ -13,6 +13,8 @@
                         <th>Email</th>
                         <th>Mensaje</th>
                         <th>Fecha</th>
+                        <th>Respondido</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,9 +25,33 @@
                             <td><?= esc($consulta['email']) ?></td>
                             <td><?= esc($consulta['mensaje']) ?></td>
                             <td><?= $consulta['fecha'] ?></td>
+                            <td>
+                                <?php if ($consulta['respondido'] === 'SI'): ?>
+                                    <span class="badge bg-success">Sí</span>
+                                <?php else: ?>
+                                    <span class="badge bg-danger">No</span>
+                                <?php endif; ?>
+                            </td>
+                            <td>
+                                <form method="post" action="<?= base_url('consultas/cambiarRespondido/' . $consulta['id']) ?>" style="display:inline-block;">
+                                    <?= csrf_field() ?>
+                                    <button class="btn btn-sm btn-outline-primary" type="submit">
+                                        Cambiar
+                                    </button>
+                                </form>
+                                
+                                <form class="mt-1" method="post" action="<?= base_url('consultas/eliminar/' . $consulta['id']) ?>" style="display:inline-block;" onsubmit="return confirm('¿Estás seguro de que querés eliminar esta consulta?');">
+                                    <?= csrf_field() ?>
+                                    <button class="btn btn-sm btn-outline-danger" type="submit">
+                                        Eliminar
+                                    </button>
+                                </form>
+                            </td>
+
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
+
             </table>
         </div>
     <?php endif; ?>

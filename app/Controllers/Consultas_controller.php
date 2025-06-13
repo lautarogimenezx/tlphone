@@ -35,6 +35,33 @@ class Consultas_controller extends BaseController
 
         return redirect()->to('/contacto')->with('mensaje_exito', '¡Mensaje enviado con éxito!');
     }
+    public function cambiarRespondido($id)
+    {
+        $consulta = $this->consultasModel->find($id);
+
+        if (!$consulta) {
+            return redirect()->back()->with('mensaje_error', 'Consulta no encontrada.');
+        }
+
+        $nuevoEstado = ($consulta['respondido'] === 'SI') ? 'NO' : 'SI';
+        $this->consultasModel->cambiarEstado($id, $nuevoEstado);
+
+        return redirect()->back()->with('mensaje_exito', 'Estado actualizado.');
+    }
+    public function eliminar($id)
+    {
+        $consulta = $this->consultasModel->find($id);
+
+        if (!$consulta) {
+            return redirect()->back()->with('mensaje_error', 'Consulta no encontrada.');
+        }
+
+        $this->consultasModel->delete($id);
+
+        return redirect()->back()->with('mensaje_exito', 'Consulta eliminada correctamente.');
+    }
+
+
 
     public function verConsultas()
     {

@@ -29,57 +29,67 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
 $routes->get('/', 'Home::index');
-$routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
+
+$routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
+
 $routes->get('/registrarse', 'Usuarios_controller::create');
 $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
-$routes->get('/usuarios', 'Usuarios_controller::index');
-$routes->get('usuarios/baja/(:num)', 'Usuarios_controller::baja/$1');
-$routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1');
-$routes->get('usuario/perfil', 'Usuarios_controller::perfil');
-$routes->post('usuario/actualizar_perfil', 'Usuarios_controller::actualizar_perfil');
-$routes->get('usuarios/cambiarRol/(:num)', 'Usuarios_controller::cambiarRol/$1');
+
+$routes->get('/usuarios', 'Usuarios_controller::index', ['filter' => 'auth']);
+$routes->get('usuarios/baja/(:num)', 'Usuarios_controller::baja/$1', ['filter' => 'auth']);
+$routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1', ['filter' => 'auth']);
+$routes->get('usuario/perfil', 'Usuarios_controller::perfil', ['filter' => 'auth']);
+$routes->post('usuario/actualizar_perfil', 'Usuarios_controller::actualizar_perfil', ['filter' => 'auth']);
+$routes->get('usuarios/cambiarRol/(:num)', 'Usuarios_controller::cambiarRol/$1', ['filter' => 'auth']);
 
 $routes->get('/enviarlogin', 'Login_controller::auth');
 $routes->get('/iniciosesion', 'Login_controller::index');
 $routes->post('/iniciosesion', 'Login_controller::auth');
-$routes->get('/logout', 'Login_controller::logout'); 
+$routes->get('/logout', 'Login_controller::logout', ['filter' => 'auth']);
 
 $routes->get('productosactivos', 'Producto_controller::index');
 $routes->get('catalogo', 'Producto_controller::catalogo');
 $routes->get('catalogo/(:num)', 'Producto_controller::catalogo/$1');
-$routes->get('altaproducto', 'Producto_controller::creaproducto');
-$routes->post('productos/store', 'Producto_controller::store');
-$routes->get('productos/edit/(:num)', 'Producto_controller::edit/$1');
-$routes->post('productos/update/(:num)', 'Producto_controller::update/$1');
-$routes->get('productos/delete/(:num)', 'Producto_controller::delete/$1');
-$routes->get('productos/eliminados', 'Producto_controller::eliminados');
-$routes->get('productos/reactivar/(:num)', 'Producto_controller::reactivar/$1');
+
+$routes->get('altaproducto', 'Producto_controller::creaproducto', ['filter' => 'auth']);
+$routes->post('productos/store', 'Producto_controller::store', ['filter' => 'auth']);
+$routes->get('productos/edit/(:num)', 'Producto_controller::edit/$1', ['filter' => 'auth']);
+$routes->post('productos/update/(:num)', 'Producto_controller::update/$1', ['filter' => 'auth']);
+$routes->get('productos/delete/(:num)', 'Producto_controller::delete/$1', ['filter' => 'auth']);
+$routes->get('productos/eliminados', 'Producto_controller::eliminados', ['filter' => 'auth']);
+$routes->get('productos/reactivar/(:num)', 'Producto_controller::reactivar/$1', ['filter' => 'auth']);
+$routes->post('productos/borrar_definitivo/(:num)', 'Producto_controller::borrar_definitivo/$1');
+
 
 $routes->get('/nosotros', 'Home::nosotros');
 $routes->get('/terminos', 'Home::terminos');
 $routes->get('/comercializacion', 'Home::comercializacion');
-$routes->get('/favoritos', 'Home::favoritos');
+$routes->get('/favoritos', 'Home::favoritos', ['filter' => 'auth']);
 
-$routes->get('carrito', 'Carrito_controller::index');
-$routes->post('carrito/add', 'Carrito_controller::add');
-$routes->post('carrito/actualiza_carrito', 'Carrito_controller::actualiza_carrito');
-$routes->post('carrito/eliminar_item', 'Carrito_controller::eliminar_item');
-$routes->post('carrito/vaciar_carrito', 'Carrito_controller::vaciar_carrito');
-$routes->get('compras/mis_compras', 'Carrito_controller::verComprasUsuario');
-$routes->get('factura/ver/(:num)', 'Carrito_controller::verFactura/$1');
-$routes->get('carrito/finalizar_compra', 'Carrito_controller::finalizarCompra');
+$routes->get('carrito', 'Carrito_controller::index', ['filter' => 'auth']);
+$routes->post('carrito/add', 'Carrito_controller::add', ['filter' => 'auth']);
+$routes->post('carrito/actualiza_carrito', 'Carrito_controller::actualiza_carrito', ['filter' => 'auth']);
+$routes->post('carrito/eliminar_item', 'Carrito_controller::eliminar_item', ['filter' => 'auth']);
+$routes->post('carrito/vaciar_carrito', 'Carrito_controller::vaciar_carrito', ['filter' => 'auth']);
+$routes->get('compras/mis_compras', 'Carrito_controller::verComprasUsuario', ['filter' => 'auth']);
+$routes->get('factura/ver/(:num)', 'Carrito_controller::verFactura/$1', ['filter' => 'auth']);
+$routes->get('carrito/finalizar_compra', 'Carrito_controller::finalizarCompra', ['filter' => 'auth']);
 
-$routes->get('ventas/mis_compras', 'Ventas_controller::mis_compras');
-$routes->get('ventas/ver_factura/(:num)', 'Ventas_controller::ver_factura/$1');
-$routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta');
-$routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta');
-$routes->get('ventas', 'Ventas_controller::todas_las_ventas');
-$routes->get('ventas/descargar_factura/(:num)', 'Ventas_controller::descargar_factura/$1');
+$routes->get('ventas/mis_compras', 'Ventas_controller::mis_compras', ['filter' => 'auth']);
+$routes->get('ventas/ver_factura/(:num)', 'Ventas_controller::ver_factura/$1', ['filter' => 'auth']);
+$routes->get('ventas/ver_factura_admin/(:num)', 'Ventas_controller::ver_factura_admin/$1', ['filter' => 'auth']);
+$routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta', ['filter' => 'auth']);
+$routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta', ['filter' => 'auth']);
+$routes->get('ventas', 'Ventas_controller::todas_las_ventas', ['filter' => 'auth']);
+$routes->get('ventas/descargar_factura/(:num)', 'Ventas_controller::descargar_factura/$1', ['filter' => 'auth']);
 
 $routes->get('contacto', 'Consultas_controller::index');
 $routes->post('contacto/enviar', 'Consultas_controller::enviar');
-$routes->get('consultas', 'Consultas_controller::verConsultas');
+$routes->get('consultas', 'Consultas_controller::verConsultas', ['filter' => 'auth']);
+$routes->post('consultas/cambiarRespondido/(:num)', 'Consultas_controller::cambiarRespondido/$1');
+$routes->post('consultas/eliminar/(:num)', 'Consultas_controller::eliminar/$1');
 
 /*
  * --------------------------------------------------------------------

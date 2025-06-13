@@ -22,7 +22,7 @@
                         <td><?= $venta['id_usuarios'] ?></td>
                         <td><?= $venta['nombre'] ?></td>
                         <td>
-                            <a href="<?= base_url('ventas/ver_factura/' . $venta['id']) ?>" class="btn btn-sm btn-primary">Ver factura</a>
+                            <a href="<?= base_url('ventas/ver_factura_admin/' . $venta['id']) ?>" class="btn btn-sm btn-primary">Ver factura</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

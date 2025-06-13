@@ -28,12 +28,15 @@
             <?php foreach ($productos as $producto): ?>
                 <div class="col">
                     <div class="card text-center h-100 position-relative">
-
                         <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" 
                             class="card-img-top object-fit-contain img-tarjetas" 
                             alt="<?= esc($producto['nombre_prod']) ?>">
 
                         <div class="card-body">
+                            <?php if ($producto['stock'] <= $producto['stock_min']): ?>
+                                <span class="badge mb-2 bg-danger">¡Últimas unidades!</span>
+                            <?php endif; ?>
+                            <br>
                             <span class="badge mb-2 bg-warning">ENVÍO GRATIS</span>
 
                             <h4>$<?= esc(number_format($producto['precio_vta'], 2, ',', '.')) ?></h4>

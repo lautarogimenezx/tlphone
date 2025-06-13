@@ -10,7 +10,7 @@ class Consultas_model extends Model
 
     protected $table = 'consultas'; // tu tabla real
     protected $primaryKey = 'id';
-    protected $allowedFields = ['nombre', 'email', 'mensaje'];
+    protected $allowedFields = ['nombre', 'email', 'mensaje', 'fecha', 'respondido'];
 
     protected $useTimestamps = false;
 
@@ -19,4 +19,10 @@ class Consultas_model extends Model
     {
         return $this->insert($data);
     }
+
+    public function cambiarEstado($id, $nuevoEstado)
+    {
+    return $this->update($id, ['respondido' => $nuevoEstado]);
+    }
+
 }

@@ -162,6 +162,30 @@ class Producto_controller extends Controller
         return redirect()->to(site_url('productos/eliminados'));
     }
 
+    public function borrar_definitivo($id)
+    {
+        $productoModel = new Producto_Model();
+        $producto = $productoModel->find($id);
+
+        if (!$producto) {
+            session()->setFlashdata('error', 'Producto no encontrado.');
+            return redirect()->back();
+        }
+
+        // Eliminar imagen del servidor
+        $imagenPath = ROOTPATH . 'assets/uploads/' . $producto['imagen'];
+        if (is_file($imagenPath)) {
+            unlink($imagenPath);
+        }
+
+        // Eliminar registro de la base de datos
+        $productoModel->delete($id);
+
+        session()->setFlashdata('success', 'Producto eliminado definitivamente.');
+        return redirect()->to(site_url('productos/eliminados'));
+    }
+
+
     public function catalogo($categoriaId = null)
     {
         $productoModel = new Producto_Model();
