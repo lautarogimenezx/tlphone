@@ -1,4 +1,4 @@
-<!-- app/Views/back/compras/finalizar_compra.php -->
+
 <div class="container mt-5">
     <h2>Confirmar compra</h2>
     <p>Total a pagar: <strong>$<?= number_format($cart->total(), 2) ?></strong></p>

@@ -9,12 +9,10 @@ class Home extends BaseController
         $productoModel = new \App\Models\Producto_model();
         $categoriaModel = new \App\Models\categoria_model();
 
-        // Productos destacados con ID específicos
         $productosDestacados = $productoModel
             ->whereIn('id', [16, 26, 38])
             ->findAll();
 
-        // Obtener categorías activas
         $categorias = $categoriaModel->getCategorias();
 
         $data = [

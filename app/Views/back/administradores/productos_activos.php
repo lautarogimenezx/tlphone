@@ -28,7 +28,7 @@
         <tbody>
             <?php foreach ($productos as $producto): ?>
                 <tr>
-                    <td><?= esc($producto['id']) ?></td> <!-- NUEVA CELDA CON ID -->
+                    <td><?= esc($producto['id']) ?></td>
                     <td>
                         <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="Imagen del producto" width="80">
                     </td>

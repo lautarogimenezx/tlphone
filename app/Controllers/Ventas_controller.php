@@ -87,7 +87,7 @@ class Ventas_controller extends Controller
 
         echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('back/compras/vista_compras', $data); // ← vista correcta
+        echo view('back/compras/vista_compras', $data);
         echo view('front/footer_view');
     }
 
@@ -127,7 +127,7 @@ public function ver_factura($venta_id)
 
     echo view('front/head_view', $data);
     echo view('front/nav_view');
-    echo view('back/compras/ver_factura_usuario', $data); // ← podés cambiar esta vista por otra para admin si querés
+    echo view('back/compras/ver_factura_usuario', $data);
     echo view('front/footer_view');
 }
 
@@ -166,7 +166,7 @@ public function ver_factura_admin($venta_id)
 
     echo view('front/head_view', $data);
     echo view('front/nav_view');
-    echo view('back/compras/ver_factura_admin', $data); // ← podés cambiar esta vista por otra para admin si querés
+    echo view('back/compras/ver_factura_admin', $data);
     echo view('front/footer_view');
 }
 
@@ -192,7 +192,6 @@ public function ver_factura_admin($venta_id)
         $ventasModel = new \App\Models\Ventas_cabecera_model();
         $detalleModel = new \App\Models\Ventas_detalle_model();
 
-        // Obtener cabecera con datos del usuario (JOIN en ambos casos)
         if ($is_admin) {
             $cabecera = $ventasModel->getCabeceraConUsuario($venta_id);
         } else {
@@ -215,7 +214,6 @@ public function ver_factura_admin($venta_id)
             'detalle'  => $detalle
         ];
 
-        // Renderizar HTML
         $html = view('back/compras/factura_pdf', $data, ['saveData' => true]);
 
         // Generar PDF
@@ -293,7 +291,6 @@ public function ver_factura_admin($venta_id)
             'total_del_dia' => $total_del_dia
         ];
 
-        // Renderizar la vista como HTML
         $html = view('back/compras/pdf_por_fecha', $data, ['saveData' => true]);
 
         // Generar PDF

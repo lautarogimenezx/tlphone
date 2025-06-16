@@ -19,7 +19,7 @@ class Ventas_cabecera_model extends Model
             return $this->where('usuario_id', $usuario_id)->findAll();
         }
 
-        return $this->findAll(); // usado por el admin
+        return $this->findAll();
     }
 
     /**

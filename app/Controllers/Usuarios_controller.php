@@ -50,7 +50,6 @@ class Usuarios_controller extends BaseController
             $data['validation'] = $this->validator;
             $data['titulo'] = 'Registrarse | tlphone';
 
-            // Renderizamos la vista con errores y datos ingresados
             echo view('front/head_view', $data);
             echo view('front/nav_view');
             echo view('back/usuario/registrarse', $data);
@@ -136,7 +135,6 @@ public function actualizar_perfil()
         $usuario = $usuarioModel->find($id);
 
         if ($usuario) {
-            // Cambiar de 1 a 2, o de 2 a 1
             $nuevoRol = ($usuario['perfil_id'] == 1) ? 2 : 1;
 
             $usuarioModel->update($id, ['perfil_id' => $nuevoRol]);

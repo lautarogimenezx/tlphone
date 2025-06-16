@@ -48,12 +48,12 @@
     setTimeout(function () {
         const mensaje = document.getElementById('mensaje-bienvenida');
         if (mensaje) {
-            // Efecto de desvanecimiento (opcional)
+            // Efecto de desvanecimiento
             mensaje.style.transition = 'opacity 0.5s ease';
             mensaje.style.opacity = '0';
-            setTimeout(() => mensaje.style.display = 'none', 500); // Oculta completamente después del fade
+            setTimeout(() => mensaje.style.display = 'none', 500);
         }
-    }, 4000); // 4000 ms = 4 segundos
+    }, 4000);
 </script>
 </body>
 

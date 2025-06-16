@@ -37,8 +37,7 @@
     
     <div class="mb-3">
         <a href="<?= base_url('ventas/reporte_productos') ?>" class="btn btn-info">Productos más vendidos</a>
-        <a href="<?= base_url('ventas/reporte_tiempo') ?>" class="btn btn-success me-2">Reporte por día</a>
-        <a href="<?= base_url('ventas/reporte_tiempo') ?>" class="btn btn-success me-2">Reporte por mes</a>
+        <a href="<?= base_url('ventas/reporte_tiempo') ?>" class="btn btn-success me-2">Reporte de ventas por día</a>
     </div>
 
 </div>

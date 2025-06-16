@@ -1,7 +1,6 @@
 <div class="container full-height-container d-flex flex-column justify-content-center my-5 py-5">
     <div class="row justify-content-center g-4 py-5">
 
-        <!-- Card: Alta de producto -->
         <div class="col-12 col-md-6 col-lg-4">
             <a href="<?= base_url('altaproducto'); ?>" class="text-decoration-none" style="cursor:pointer;">
                 <div class="card h-100 text-center">
@@ -16,7 +15,6 @@
             </a>
         </div>
 
-        <!-- Card: Productos activos -->
         <div class="col-12 col-md-6 col-lg-4">
             <a href="<?= base_url('productosactivos'); ?>" class="text-decoration-none" style="cursor:pointer;">
                 <div class="card h-100 text-center">

@@ -10,7 +10,7 @@
     <table id="tablaProductos" class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
-                <th>ID</th> <!-- NUEVA COLUMNA -->
+                <th>ID</th>
                 <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Precio</th>
@@ -23,7 +23,7 @@
         <tbody>
             <?php foreach ($productos as $producto): ?>
                 <tr>
-                    <td><?= esc($producto['id']) ?></td> <!-- NUEVA CELDA -->
+                    <td><?= esc($producto['id']) ?></td>
                     <td>
                         <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" alt="Imagen del producto" width="80">
                     </td>

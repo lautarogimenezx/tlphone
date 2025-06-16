@@ -5,7 +5,6 @@
                 <div class="card p-4 shadow-sm">
                     <h2 class="text-center mb-4">Crear Cuenta</h2>
 
-                    <!-- Flash messages -->
                     <?php if (session()->getFlashdata('fail')): ?>
                         <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
                     <?php endif; ?>

@@ -65,7 +65,7 @@
     <div class="container pb-3">
     <div class="row g-4">
 
-        <!-- Tarjeta 1 -->
+        <!-- Tarjeta de productos -->
         <section>
     <div class="container pb-3">
     <div class="row g-4">
@@ -113,7 +113,7 @@
 </section>
 
 
-<!-- Envío Express (como imagen alargada) -->
+<!-- Envío Express -->
 <div class="my-1">
     <img src="assets/img/Envios.png" alt="Envio Express" class="img-fluid w-100">
 </div>

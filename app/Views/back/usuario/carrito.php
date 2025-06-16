@@ -1,7 +1,6 @@
 <div class="container mt-4">
     <h2 class="mb-4">Carrito de compras</h2>
-
-    <!-- Mostrar mensaje de sesión -->
+    
     <?php if (session('mensaje')) : ?>
         <div class="alert alert-info alert-dismissible fade show" role="alert">
             <?= session('mensaje') ?>

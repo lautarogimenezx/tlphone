@@ -121,7 +121,6 @@ class Producto_controller extends Controller
             'stock_min' => $this->request->getVar('stock_min'),
         ];
 
-        // Si se subió una nueva imagen
         $img = $this->request->getFile('imagen');
         if ($img && $img->isValid()) {
             $nombre_aleatorio = $img->getRandomName();
@@ -137,7 +136,7 @@ class Producto_controller extends Controller
     public function delete($id)
     {
         $productoModel = new Producto_Model();
-        $productoModel->update($id, ['eliminado' => 'SI']); // Baja lógica con 'SI'
+        $productoModel->update($id, ['eliminado' => 'SI']);
         session()->setFlashdata('success', 'Producto eliminado');
         return redirect()->to(site_url('productosactivos'));
     }
@@ -145,7 +144,7 @@ class Producto_controller extends Controller
     public function eliminados()
     {
         $productoModel = new Producto_Model();
-        $data['productos'] = $productoModel->where('eliminado', 'SI')->findAll(); // Filtrar por 'SI'
+        $data['productos'] = $productoModel->where('eliminado', 'SI')->findAll(); 
         $dato['titulo'] = 'Productos eliminados';
 
         echo view('front/head_view', $dato);
@@ -157,7 +156,7 @@ class Producto_controller extends Controller
     public function reactivar($id)
     {
         $productoModel = new Producto_Model();
-        $productoModel->update($id, ['eliminado' => 'NO']); // Reactivar con 'NO'
+        $productoModel->update($id, ['eliminado' => 'NO']); 
         session()->setFlashdata('success', 'Producto reactivado');
         return redirect()->to(site_url('productos/eliminados'));
     }
@@ -172,13 +171,11 @@ class Producto_controller extends Controller
             return redirect()->back();
         }
 
-        // Eliminar imagen del servidor
         $imagenPath = ROOTPATH . 'assets/uploads/' . $producto['imagen'];
         if (is_file($imagenPath)) {
             unlink($imagenPath);
         }
 
-        // Eliminar registro de la base de datos
         $productoModel->delete($id);
 
         session()->setFlashdata('success', 'Producto eliminado definitivamente.');
@@ -202,7 +199,6 @@ class Producto_controller extends Controller
             $data['productos'] = $productoModel->getProductoAll();
         }
 
-        // ➕ Agregamos el id de la categoría actual para marcarla en la vista
         $data['categoria_actual'] = $categoriaId;
 
         $dato['titulo'] = 'Catálogo';
