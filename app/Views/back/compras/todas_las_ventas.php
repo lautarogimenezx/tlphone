@@ -1,4 +1,5 @@
 <div class="container mt-4">
+    <br>
     <h2 class="mb-4">Ventas</h2>
 
     <?php if (!empty($ventas)) : ?>
@@ -31,8 +32,17 @@
     <?php else : ?>
         <div class="alert alert-info">No hay ventas registradas aún.</div>
     <?php endif; ?>
+
+    <br>
+    
+    <div class="mb-3">
+        <a href="<?= base_url('ventas/reporte_productos') ?>" class="btn btn-info">Productos más vendidos</a>
+        <a href="<?= base_url('ventas/reporte_tiempo') ?>" class="btn btn-success me-2">Reporte por día</a>
+        <a href="<?= base_url('ventas/reporte_tiempo') ?>" class="btn btn-success me-2">Reporte por mes</a>
+    </div>
+
 </div>
-<br>
+
 <script>
     $(document).ready(function () {
         $('#tablaVentas').DataTable({

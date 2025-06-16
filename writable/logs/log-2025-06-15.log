@@ -1,0 +1,532 @@
+ERROR - 2025-06-15 21:52:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4 in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas_...', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_...')
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_...')
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_...', Array, false)
+#4 C:\xampp\htdocs\tlphone\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\tlphone\app\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\tlphone\app\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(NULL, NULL)
+#8 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+#9 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 21:52:30 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+[Method: GET, Route: ventas/reporte_por_fecha]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:52:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:52:30 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-15 21:52:38 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `product...', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\xampp\htdocs\tlphone\app\Models\ventas_detalle_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\app\Controllers\Ventas_controller.php(254): App\Models\ventas_detalle_model->getProductosMasVendidos()
+#6 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos_vendidos()
+#7 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#8 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-06-15 21:52:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+[Method: GET, Route: ventas/reporte_productos_vendidos]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC', [], false)
+ 2 APPPATH\Models\ventas_detalle_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Ventas_controller.php(254): App\Models\ventas_detalle_model->getProductosMasVendidos()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos_vendidos()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:52:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC', [], false)
+ 4 APPPATH\Models\ventas_detalle_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Ventas_controller.php(254): App\Models\ventas_detalle_model->getProductosMasVendidos()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos_vendidos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:52:38 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) AS total_vendido
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `ventas_detalle`.`producto_id`
+ORDER BY `total_vendido` DESC', [], false)
+ 5 APPPATH\Models\ventas_detalle_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Ventas_controller.php(254): App\Models\ventas_detalle_model->getProductosMasVendidos()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos_vendidos()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-15 21:54:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4 in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas_...', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_...')
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_...')
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_...', Array, false)
+#4 C:\xampp\htdocs\tlphone\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\tlphone\app\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\tlphone\app\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(NULL, NULL)
+#8 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+#9 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 21:54:03 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+[Method: GET, Route: ventas/reporte_por_fecha]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:54:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:54:03 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-15 21:54:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4 in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas_...', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_...')
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_...')
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_...', Array, false)
+#4 C:\xampp\htdocs\tlphone\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\tlphone\app\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\tlphone\app\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(NULL, NULL)
+#8 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+#9 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#10 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-15 21:54:23 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+[Method: GET, Route: ventas/reporte_por_fecha]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:54:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 21:54:23 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas_cabecera`.*, `usuarios`.`nombre`
+FROM `ventas_cabecera`
+JOIN `usuarios` ON `usuarios`.`id_usuarios` = `ventas_cabecera`.`usuario_id`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL
+ORDER BY `fecha` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Ventas_cabecera_model.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Ventas_controller.php(238): App\Models\Ventas_cabecera_model->getVentasPorRango(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_por_fecha()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:02:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/reportes/reporte_tiempo.php"
+[Method: GET, Route: ventas/reporte_tiempo]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/reportes/reporte_tiempo.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/reportes/reporte_tiempo', [], true)
+ 3 APPPATH\Controllers\Ventas_controller.php(244): view('back/reportes/reporte_tiempo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_tiempo()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-15 23:04:03 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\tlphone\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `product...', 0)
+#1 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\xampp\htdocs\tlphone\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\xampp\htdocs\tlphone\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\xampp\htdocs\tlphone\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tlphone\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\tlphone\app\Controllers\Ventas_controller.php(256): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos()
+#8 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#9 C:\xampp\htdocs\tlphone\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tlphone\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\tlphone\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\tlphone\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-06-15 23:04:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+[Method: GET, Route: ventas/reporte_productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Ventas_controller.php(256): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:04:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Ventas_controller.php(256): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:04:03 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`nombre`, SUM(ventas_detalle.cantidad) as total_vendidos
+FROM `ventas_detalle`
+JOIN `productos` ON `productos`.`id` = `ventas_detalle`.`producto_id`
+GROUP BY `productos`.`id`
+ORDER BY `total_vendidos` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Ventas_controller.php(256): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->reporte_productos()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-15 23:31:37 --> ErrorException: Undefined variable $total_del_dia
+[Method: GET, Route: ventas/pdf_por_fecha/2025-06-15]
+in APPPATH\Views\back\compras\pdf_por_fecha.php on line 33.
+ 1 APPPATH\Views\back\compras\pdf_por_fecha.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_del_dia', 'C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\compras\\pdf_por_fecha.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\tlphone\\app\\Views\\back\\compras\\pdf_por_fecha.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/compras/pdf_por_fecha', [], true)
+ 5 APPPATH\Controllers\Ventas_controller.php(293): view('back/compras/pdf_por_fecha', [...], [])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->pdf_por_fecha('2025-06-15')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

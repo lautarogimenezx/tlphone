@@ -83,7 +83,7 @@ class Ventas_controller extends Controller
         
         // Obtener solo las compras del usuario logueado
         $data['compras'] = $ventasModel->getVentas($id_usuario);
-        $data['titulo'] = "Mis Compras";
+        $data['titulo'] = "Mis compras";
 
         echo view('front/head_view', $data);
         echo view('front/nav_view');
@@ -175,7 +175,7 @@ public function ver_factura_admin($venta_id)
 {
     $ventasModel = new \App\Models\Ventas_cabecera_model();
     $data['ventas'] = $ventasModel->getTodasLasVentasConUsuarios();
-    $data['titulo'] = "Ventas Administrador";
+    $data['titulo'] = "Ventas administrador";
 
     echo view('front/head_view', $data);
     echo view('front/nav_view');
@@ -228,4 +228,81 @@ public function ver_factura_admin($venta_id)
         $dompdf->stream("Factura_{$venta_id}.pdf", ['Attachment' => true]);
     }
 
+    public function reporte_tiempo()
+    {
+        $ventasModel = new Ventas_cabecera_model();
+
+        $data['reporte'] = $ventasModel->select("DATE(fecha) as fecha, COUNT(*) as cantidad_ventas, SUM(total_venta) as total")
+                                    ->groupBy("DATE(fecha)")
+                                    ->orderBy("fecha", "DESC")
+                                    ->findAll();
+
+        $data['titulo'] = "Reporte de ventas por día";
+
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('back/compras/reporte_tiempo', $data);
+        echo view('front/footer_view');
+    }
+
+    public function reporte_productos()
+    {
+        $detalleModel = new Ventas_detalle_model();
+
+        $data['reporte'] = $detalleModel
+            ->select('productos.id as id_producto, productos.nombre_prod as nombre, SUM(ventas_detalle.cantidad) as total_vendidos')
+            ->join('productos', 'productos.id = ventas_detalle.producto_id')
+            ->groupBy('productos.id')
+            ->orderBy('total_vendidos', 'DESC')
+            ->findAll();
+
+
+        $data['titulo'] = "Productos más vendidos";
+
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('back/compras/reporte_productos', $data);
+        echo view('front/footer_view');
+    }
+
+    public function pdf_por_fecha($fecha)
+    {
+        $ventasModel = new \App\Models\Ventas_cabecera_model();
+        $detalleModel = new \App\Models\Ventas_detalle_model();
+
+        // Buscar todas las ventas de ese día
+        $ventas = $ventasModel
+            ->where('DATE(fecha)', $fecha)
+            ->findAll();
+
+        if (empty($ventas)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('No se encontraron ventas para esa fecha.');
+        }
+
+        // Para cada venta, obtener su detalle
+        foreach ($ventas as &$venta) {
+            $venta['detalles'] = $detalleModel->getDetalles($venta['id']);
+        }
+
+        // Calcular total del día
+        $total_del_dia = array_sum(array_column($ventas, 'total_venta'));
+
+        $data = [
+            'fecha' => $fecha,
+            'ventas' => $ventas,
+            'total_del_dia' => $total_del_dia
+        ];
+
+        // Renderizar la vista como HTML
+        $html = view('back/compras/pdf_por_fecha', $data, ['saveData' => true]);
+
+        // Generar PDF
+        $dompdf = new \Dompdf\Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+
+        // Descargar PDF
+        $dompdf->stream("Reporte_ventas_{$fecha}.pdf", ['Attachment' => true]);
+    }
 }

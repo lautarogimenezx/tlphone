@@ -84,6 +84,9 @@ $routes->post('ventas/registrar_venta', 'Ventas_controller::registrar_venta', ['
 $routes->get('ruta/a/checkout', 'Ventas_controller::registrar_venta', ['filter' => 'auth']);
 $routes->get('ventas', 'Ventas_controller::todas_las_ventas', ['filter' => 'auth']);
 $routes->get('ventas/descargar_factura/(:num)', 'Ventas_controller::descargar_factura/$1', ['filter' => 'auth']);
+$routes->get('ventas/reporte_tiempo', 'Ventas_controller::reporte_tiempo', ['filter' => 'auth']);
+$routes->get('ventas/reporte_productos', 'Ventas_controller::reporte_productos', ['filter' => 'auth']);
+$routes->get('ventas/pdf_por_fecha/(:segment)', 'Ventas_controller::pdf_por_fecha/$1', ['filter' => 'auth']);
 
 $routes->get('contacto', 'Consultas_controller::index');
 $routes->post('contacto/enviar', 'Consultas_controller::enviar');
