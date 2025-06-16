@@ -1,3 +1,6 @@
+<?php $usuarioActual = session()->get('id_usuario'); ?>
+
+
 <div class="container mt-5 mb-5">
     <h2 class="text-center mb-4">Usuarios Registrados</h2>
 
@@ -33,13 +36,18 @@
                         <?= $u['baja'] === 'SI' ? '<span class="text-danger">Inactivo</span>' : '<span class="text-success">Activo</span>' ?>
                     </td>
                     <td>
-                        <?php if ($u['baja'] === 'SI'): ?>
-                            <a href="<?= base_url('usuarios/alta/' . $u['id_usuarios']) ?>" class="btn btn-success btn-sm">Reactivar</a>
+                        <?php if ($u['id_usuarios'] !== $usuarioActual): ?>
+                            <?php if ($u['baja'] === 'SI'): ?>
+                                <a href="<?= base_url('usuarios/alta/' . $u['id_usuarios']) ?>" class="btn btn-success btn-sm">Reactivar</a>
+                            <?php else: ?>
+                                <a href="<?= base_url('usuarios/baja/' . $u['id_usuarios']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que querés dar de baja este usuario?');">Dar de baja</a>
+                            <?php endif; ?>
+                            <a href="<?= base_url('usuarios/cambiarRol/' . $u['id_usuarios']) ?>" class="btn btn-warning btn-sm ms-1">Cambiar rol</a>
                         <?php else: ?>
-                            <a href="<?= base_url('usuarios/baja/' . $u['id_usuarios']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que querés dar de baja este usuario?');">Dar de baja</a>
+                            <span class="text-muted"></span>
                         <?php endif; ?>
-                        <a href="<?= base_url('usuarios/cambiarRol/' . $u['id_usuarios']) ?>" class="btn btn-warning btn-sm ms-1">Cambiar rol</a>
                     </td>
+
                 </tr>
             <?php endforeach; ?>
         </tbody>
