@@ -12,7 +12,7 @@ class Usuarios_controller extends BaseController
     }
 
     public function index()
-    {
+    { 
     $usuarioModel = new \App\Models\Usuarios_model();
     $data['usuarios'] = $usuarioModel->findAll();
 
