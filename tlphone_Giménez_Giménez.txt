@@ -1,0 +1,23 @@
+Entrega Segundo Proyecto 2025 - Prof. Salazar - Prof. Garcia
+Repositorios de GitHub:
+
+Giménez, Lautaro Nicolás
+https://github.com/lautarogimenezx/tlphone.git
+
+Giménez, Tomás
+https://github.com/TomiiGimenez2712/tlphone.git
+
+Cuentas de Administradores:
+
+tomii@gmail.com				- clave: hola123
+lautarogimenezx@gmail.com		- clave: hola123
+
+Cuentas de Usuarios:
+
+usuario@gmail.com			- clave: hola123
+lucia@gmail.com				- clave: hola123
+juan@gmail.com				- clave: hola123
+joa@gmail.com				- clave: hola123
+
+
+El archivo .sql se encuentra dentro de la carpeta del proyecto en el repositorio.
