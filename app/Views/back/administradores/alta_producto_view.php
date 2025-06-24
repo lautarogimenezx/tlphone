@@ -47,7 +47,7 @@
 
         <div class="d-flex gap-2">
             <button type="submit" class="btn btn-success">Enviar</button>
-            <a href="<?= site_url('productos') ?>" class="btn btn-danger">Cancelar</a>
+            <a href="<?= site_url('productosactivos') ?>" class="btn btn-danger">Cancelar</a>
         </div>
     </form>
 </div>

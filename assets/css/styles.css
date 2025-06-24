@@ -60,3 +60,11 @@ html, body {
     object-fit: contain;
 }
 
+@media (max-width: 576px) {
+    .navbar .dropdown-menu {
+        left: auto !important;
+        right: 0 !important;
+        min-width: 100% !important;
+    }
+}
+

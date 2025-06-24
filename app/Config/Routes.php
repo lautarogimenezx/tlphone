@@ -37,7 +37,7 @@ $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/registrarse', 'Usuarios_controller::create');
 $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
 
-$routes->get('/usuarios', 'Usuarios_controller::index', ['filter' => 'auth']);
+$routes->get('/usuarios', 'Usuarios_controller::index', ['filter' => 'auth:admin']);
 $routes->get('usuarios/baja/(:num)', 'Usuarios_controller::baja/$1', ['filter' => 'auth:admin']);
 $routes->get('usuarios/alta/(:num)', 'Usuarios_controller::alta/$1', ['filter' => 'auth:admin']);
 $routes->get('usuario/perfil', 'Usuarios_controller::perfil', ['filter' => 'auth']);
