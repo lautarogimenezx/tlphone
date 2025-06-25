@@ -1,13 +1,19 @@
 <div class="container mt-5 mb-5">
     <h2 class="text-center mb-4">Alta de Productos</h2>
 
+    <?php if (session('error')): ?>
+        <div class="alert alert-danger">
+            <?= session('error') ?>
+        </div>
+    <?php endif; ?>
+
     <form action="<?= site_url('productos/store') ?>" method="post" enctype="multipart/form-data">
 
         <?= csrf_field() ?>
 
         <div class="mb-3">
             <label for="nombre_prod" class="form-label">Producto</label>
-            <input type="text" class="form-control" name="nombre_prod" id="nombre_prod" placeholder="Nombre" required>
+            <input type="text" class="form-control" name="nombre_prod" id="nombre_prod" placeholder="Nombre" value="<?= old('nombre_prod') ?>" required>
         </div>
 
         <div class="mb-3">
@@ -15,29 +21,31 @@
             <select name="categoria" id="categoria" class="form-select" required>
                 <option value="" disabled selected>Seleccionar Categoría</option>
                 <?php foreach ($categorias as $categoria): ?>
-                    <option value="<?= $categoria['id']; ?>"><?= $categoria['descripcion']; ?></option>
+                    <option value="<?= $categoria['id']; ?>" <?= old('categoria') == $categoria['id'] ? 'selected' : '' ?>>
+                        <?= $categoria['descripcion']; ?>
+                    </option>
                 <?php endforeach; ?>
             </select>
         </div>
 
         <div class="mb-3">
             <label for="precio" class="form-label">Precio</label>
-            <input type="number" step="0.01" class="form-control" name="precio" id="precio" required>
+            <input type="number" step="0.01" min="0" class="form-control" name="precio" id="precio" value="<?= old('precio') ?>" required>
         </div>
 
         <div class="mb-3">
             <label for="precio_vta" class="form-label">Precio Venta</label>
-            <input type="number" step="0.01" class="form-control" name="precio_vta" id="precio_vta" required>
+            <input type="number" step="0.01" min="0" class="form-control" name="precio_vta" id="precio_vta" value="<?= old('precio_vta') ?>" required>
         </div>
 
         <div class="mb-3">
             <label for="stock" class="form-label">Stock</label>
-            <input type="number" class="form-control" name="stock" id="stock" required>
+            <input type="number" class="form-control" name="stock" id="stock" value="<?= old('stock') ?>" required>
         </div>
 
         <div class="mb-3">
             <label for="stock_min" class="form-label">Stock Mínimo</label>
-            <input type="number" class="form-control" name="stock_min" id="stock_min" required>
+            <input type="number" class="form-control" name="stock_min" id="stock_min" value="<?= old('stock_min') ?>" required>
         </div>
 
         <div class="mb-3">

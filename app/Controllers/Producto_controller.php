@@ -61,13 +61,23 @@ class Producto_controller extends Controller
             $categoria_model = new categoria_model();
             $data['categorias'] = $categoria_model->getCategorias();
             $data['validation'] = $this->validator;
-            
+
             $dato['titulo'] = 'Alta productos';
             echo view('front/head_view',$dato);
             echo view('front/nav_view');
             echo view('back/administradores/alta_producto_view', $data);
             echo view('front/footer_view');
-        }else{
+        }
+        else
+        {
+            $precio = $this->request->getVar('precio');
+            $precio_vta = $this->request->getVar('precio_vta');
+
+            if ($precio < 0 || $precio_vta < 0) {
+                session()->setFlashdata('error', 'Los precios no pueden ser negativos.');
+                return redirect()->back()->withInput();
+            }
+
             $img = $this->request->getFile('imagen');
             $nombre_aleatorio = $img->getRandomName();
             $img->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
@@ -76,14 +86,13 @@ class Producto_controller extends Controller
                 'nombre_prod' => $this->request->getVar('nombre_prod'),
                 'imagen' => $nombre_aleatorio,
                 'categoria_id' => $this->request->getVar('categoria'),
-                'precio' => $this->request->getVar('precio'),
-                'precio_vta' => $this->request->getVar('precio_vta'),
+                'precio' => $precio,
+                'precio_vta' => $precio_vta,
                 'stock' => $this->request->getVar('stock'),
                 'stock_min' => $this->request->getVar('stock_min'),
             ];
 
-            $producto = new Producto_Model();
-            $producto->insert($data);
+            $productoModel->insert($data);
             session()->setFlashdata('success', 'Alta Exitosa...');
             return $this->response->redirect(site_url('productosactivos'));
         }
@@ -112,11 +121,19 @@ class Producto_controller extends Controller
     {
         $productoModel = new Producto_Model();
 
+        $precio = $this->request->getVar('precio');
+        $precio_vta = $this->request->getVar('precio_vta');
+
+        if ($precio < 0 || $precio_vta < 0) {
+            session()->setFlashdata('error', 'Los precios no pueden ser negativos.');
+            return redirect()->back()->withInput();
+        }
+
         $data = [
             'nombre_prod' => $this->request->getVar('nombre_prod'),
             'categoria_id' => $this->request->getVar('categoria'),
-            'precio' => $this->request->getVar('precio'),
-            'precio_vta' => $this->request->getVar('precio_vta'),
+            'precio' => $precio,
+            'precio_vta' => $precio_vta,
             'stock' => $this->request->getVar('stock'),
             'stock_min' => $this->request->getVar('stock_min'),
         ];
@@ -177,11 +194,9 @@ class Producto_controller extends Controller
         }
 
         $productoModel->delete($id);
-
         session()->setFlashdata('success', 'Producto eliminado definitivamente.');
         return redirect()->to(site_url('productos/eliminados'));
     }
-
 
     public function catalogo($categoriaId = null)
     {
